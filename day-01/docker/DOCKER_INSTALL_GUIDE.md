@@ -42,7 +42,22 @@ wsl --install
 wsl --update
 ```
 
-## 3. 이미지 내려받기와 YAML은 역할이 다릅니다
+## 3. `.env`를 먼저 만들고 교육용 비밀번호를 입력합니다
+
+Compose 명령을 실행하기 전에 `.env.example`을 내 PC 전용 `.env`로 복사합니다.
+
+```powershell
+Copy-Item .env.example .env
+```
+
+그 다음 `.env` 파일을 열어 강사가 안내한 교육용 비밀번호를 아래 두 값의 `CHANGE_ME...` 부분에만 입력합니다.
+
+- `ELASTIC_PASSWORD`
+- `KIBANA_PASSWORD`
+
+`STACK_VERSION`, 포트, 메모리 같은 다른 값과 `docker-compose.yml`은 수정하지 않습니다. `.env`는 GitHub에 올리거나 화면 공유에 노출하지 않습니다.
+
+## 4. 이미지 내려받기와 YAML은 역할이 다릅니다
 
 `docker-compose.yml`은 **어떤 컨테이너를 어떤 설정으로 실행할지 적은 설계도**입니다. 컨테이너를 실제로 시작하려면 ES와 Kibana **이미지**도 PC에 있어야 합니다.
 
@@ -59,12 +74,13 @@ wsl --update
 
 > 학교 네트워크에서 `docker.elastic.co`에 접속할 수 있어야 합니다. 접속이 막히면 학생은 임의로 다른 이미지를 쓰지 말고 강사에게 알립니다.
 
-## 4. 실습환경 시작
+## 5. 실습환경 시작
 
 실습 패키지의 `docker` 폴더에서 실행합니다.
 
 ```powershell
 .\preflight.ps1
+.\pull-images.ps1
 .\start.ps1
 ```
 
@@ -83,7 +99,7 @@ wsl --update
 
 `preflight.ps1`은 ES용 `9200`, Kibana용 `5601` 포트가 이미 사용 중인지 먼저 확인합니다. 다른 ES·Kibana·Docker 실습을 실행 중이면 `CHECK`가 표시되고 시작을 멈춥니다. 학생은 임의로 Compose 파일의 포트를 바꾸지 말고, 기존 실습을 종료할지 강사에게 문의합니다.
 
-## 5. 버전·환경 정상 여부 확인
+## 6. 버전·환경 정상 여부 확인
 
 ```powershell
 .\status.ps1

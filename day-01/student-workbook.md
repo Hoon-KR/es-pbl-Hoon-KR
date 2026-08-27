@@ -13,7 +13,7 @@
 - 학생이 검색 질문은 기능 목록이 아니라 사용자의 상황과 조건을 담은 문장입니다.
 - 학생이 전문 검색은 문장을 token으로 나누고 token에서 후보 문서를 찾는 흐름으로 설명합니다.
 - 학생이 정확성은 조건 밖 문서가 없는지, 관련성은 상위 결과가 사용자 의도와 가까운지의 기준입니다.
-- 학생이 학생은 Docker Compose를 설계하지 않고 제공 스크립트로 검증된 3노드 ES와 Kibana를 실행합니다.
+- 학생은 `.env.example`을 `.env`로 복사하고, 강사가 안내한 교육용 비밀번호만 입력한 뒤 제공 스크립트로 검증된 3노드 ES와 Kibana를 실행합니다.
 - 학생이 Kibana Dev Tools Console은 REST 요청과 JSON 응답을 바로 확인하는 실습 도구입니다.
 
 ## 오늘 사용할 파일
@@ -468,7 +468,7 @@ name·description은 문장 검색 후보, category 같은 범주는 값 전체 
 
 ### 핵심 개념
 
-실행 순서는 preflight, pull-images, start, status이며 Compose 파일과 실제 .env는 수정하지 않습니다.
+실행 전 `.env.example`을 `.env`로 복사하고 강사가 안내한 교육용 비밀번호만 입력합니다. 그 뒤 실행 순서는 preflight, pull-images, start, status이며 Compose 파일과 `.env`의 다른 값은 수정하지 않습니다.
 
 **주의:** 오류가 나면 포트, Docker 엔진, 이미지, 메모리 순서로 강사가 분류해 대응합니다.
 
@@ -495,9 +495,10 @@ name·description은 문장 검색 후보, category 같은 범주는 값 전체 
 
 #### 진행 순서
 
-1. 공통 쇼핑몰 예제를 먼저 실행하거나 화면에서 확인합니다.
-2. 예상 결과를 확인한 뒤, 내 PBL에서 같은 역할을 할 field·값·질문을 정합니다.
-3. 내 저장소의 README, `elasticsearch/`, `data/`, `kibana/`, `evidence/` 중 알맞은 파일에 결과를 남깁니다.
+1. `docker` 폴더에서 `Copy-Item .env.example .env`를 실행합니다.
+2. `.env`에서 `ELASTIC_PASSWORD`, `KIBANA_PASSWORD`의 `CHANGE_ME...` 값에만 강사가 안내한 교육용 비밀번호를 입력합니다.
+3. `./preflight.ps1 → ./pull-images.ps1 → ./start.ps1 → ./status.ps1` 순서로 실행합니다.
+4. `status.ps1` 결과를 확인한 뒤, 내 PBL의 환경 확인 근거를 README 또는 `evidence/`에 남깁니다.
 
 #### 예상 결과·확인 기준
 
@@ -521,7 +522,8 @@ Docker 오류가 나면 Compose나 `.env`를 임의로 수정하지 않습니다
 
 ### 복습 체크
 
-- [ ] 학생이 학생은 Docker Compose를 설계하지 않고 제공 스크립트로 검증된 3노드 ES와 Kibana를 실행합니다.
+- [ ] `.env.example`을 `.env`로 복사하고 교육용 비밀번호만 입력했다.
+- [ ] Docker Compose를 설계하거나 Compose 파일·`.env`의 다른 값을 바꾸지 않고 제공 스크립트로 3노드 ES와 Kibana를 실행했다.
 - [ ] 쇼핑몰 예제를 내 도메인에 맞게 한 항목 이상 바꾸었다.
 - [ ] 결과 또는 설계 근거를 저장소에 남겼다.
 - [ ] 다음 토픽에서 사용할 질문 또는 field를 정리했다.

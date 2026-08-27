@@ -15,6 +15,7 @@ git clone https://github.com/djkorea/es-5days-pbl-course.git
 cd es-5days-pbl-course\day-01\docker
 Copy-Item .env.example .env
 # 강사가 수업 중 안내한 두 비밀번호를 .env의 CHANGE_ME 값에만 입력한다.
+.\preflight.ps1
 .\pull-images.ps1
 .\start.ps1
 .\status.ps1
