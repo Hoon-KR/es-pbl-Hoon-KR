@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $root = Split-Path -Parent $PSCommandPath
 Set-Location $root
 $passwordLine = Get-Content -LiteralPath '.env' | Where-Object { $_ -match '^ELASTIC_PASSWORD=' } | Select-Object -First 1
@@ -9,7 +9,7 @@ Write-Host '=== Docker / Compose 버전 ==='
 docker version --format 'Docker Engine: {{.Server.Version}}'
 docker compose version
 Write-Host "`n=== 컨테이너 상태 ==="
-docker compose ps
+docker compose ps --all
 Write-Host "`n=== Elasticsearch 클러스터 상태 ==="
 docker compose exec -T es01 curl -s --cacert config/certs/ca/ca.crt -u "elastic:$elasticPassword" https://localhost:9200/_cluster/health?pretty
 Write-Host "`n=== 노드 목록 ==="

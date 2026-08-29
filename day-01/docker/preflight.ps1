@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 function Show-Check($name, $ok, $detail) {
   $mark = if ($ok) { 'PASS' } else { 'CHECK' }

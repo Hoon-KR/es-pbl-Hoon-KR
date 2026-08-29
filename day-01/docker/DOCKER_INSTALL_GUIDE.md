@@ -153,6 +153,16 @@ GET /_cat/nodes?v
 
 **`docker compose down -v`는 실행하지 않습니다.** 이 명령은 ES 데이터와 인증서 볼륨을 지울 수 있습니다. 환경 초기화는 강사 안내가 있을 때만 합니다.
 
+### 환경 초기화가 필요한 경우
+
+중간에 원인을 알 수 없는 오류가 반복되고 강사가 처음 상태로 되돌리도록 안내한 경우에만 아래를 실행합니다.
+
+```powershell
+.\reset.ps1
+```
+
+`RESET`을 정확히 입력해야 실행됩니다. `reset.ps1`은 현재 Docker Compose 프로젝트의 컨테이너·named volume·네트워크를 삭제하고 `.env`도 제거합니다. ES·Kibana 이미지는 다른 컨테이너가 사용 중이지 않을 때만 삭제합니다. 개인 PBL 저장소·강사 배포 저장소의 파일은 삭제하지 않습니다. 초기화가 끝나면 `.env.example`에서 `.env`를 다시 만든 후 `preflight → pull-images → start → status` 순서로 시작합니다.
+
 ## 7. 스스로 확인
 
 - [ ] Docker Desktop이 실행 중이다.
