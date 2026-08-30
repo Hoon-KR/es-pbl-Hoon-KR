@@ -19,7 +19,7 @@ Docker Desktop은 WSL 2 백엔드를 기본으로 사용하며, Docker 공식 �
 
 ## 2. Docker Desktop 설치
 
-1. 강사가 안내한 Docker Desktop 설치 파일을 실행합니다.
+1. [Docker Desktop Windows 공식 설치 페이지](https://docs.docker.com/desktop/setup/install/windows-install/)에서 설치 파일을 직접 다운로드해 실행합니다. 강사는 설치 파일을 GitHub 배포 저장소에 넣지 않습니다.
 2. 설치 화면에서 **WSL 2 기반 엔진 사용**을 선택합니다.
 3. 설치가 끝나면 Docker Desktop을 시작하고 사용 약관을 수락합니다.
 4. 재부팅 안내가 나오면 재부팅합니다.

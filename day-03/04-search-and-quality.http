@@ -1,0 +1,38 @@
+### 전문 검색: name과 description에서 '무선 이어폰' 찾기
+GET /products/_search
+{
+  "size": 5,
+  "query": { "multi_match": { "query": "무선 이어폰", "fields": ["name^3", "description"] } }
+}
+
+### 정확 조건: category는 keyword 필드이므로 term 사용
+GET /products/_search
+{
+  "size": 5,
+  "query": { "term": { "category": "전자기기" } }
+}
+
+### 복합 검색: 전문 검색 + 범주·가격·재고 filter
+GET /products/_search
+{
+  "size": 10,
+  "query": {
+    "bool": {
+      "must": [{ "match": { "name": "무선" } }],
+      "filter": [
+        { "term": { "category": "전자기기" } },
+        { "range": { "price": { "gte": 50000, "lte": 200000 } } },
+        { "term": { "in_stock": true } }
+      ]
+    }
+  },
+  "sort": [{ "rating": "desc" }, { "price": "asc" }],
+  "highlight": { "fields": { "name": {}, "description": {} } }
+}
+
+### 검색 품질 기준: 결과가 없어야 하는 질문도 검증한다.
+GET /products/_search
+{
+  "size": 5,
+  "query": { "bool": { "filter": [{ "term": { "category": "전자기기" } }, { "range": { "price": { "gt": 1000000 } } }] } }
+}
