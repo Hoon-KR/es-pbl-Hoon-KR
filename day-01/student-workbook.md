@@ -27,6 +27,8 @@ ES는 검색 요구를 실제 데이터와 요청으로 구현하는 도구입�
 - `README-template.md` → 개인 저장소의 `README.md`
 - `SUBMISSION-template.md` → 개인 저장소의 `SUBMISSION.md`
 - `pbl-start-card.md` → 개인 저장소의 `docs/pbl-start-card.md`
+- `data-model-template.md` → 개인 저장소의 `docs/data-model.md`
+- `dashboard-plan-template.md` → 개인 저장소의 `docs/dashboard-plan.md`
 - `PBL_REPOSITORY_WRITING_GUIDE.md` → 수업 중 작성하는 모든 PBL 내용의 개인 저장소 파일 위치 안내
 - `DAY_01_PRACTICE_AND_EVIDENCE_GUIDE.md` → PPT 실제 슬라이드 기준 Day 1 실습 중단 지점·기록 파일·확인 기준
 
@@ -34,7 +36,7 @@ ES는 검색 요구를 실제 데이터와 요청으로 구현하는 도구입�
 
 강사 배포 저장소(`es-5days-pbl-course`)는 교재·쇼핑몰 예제·Docker 환경·템플릿을 받는 곳입니다. Docker는 이 저장소의 `day-01/docker/`에서 실행하며, 원본 파일을 수정하거나 제출하지 않습니다.
 
-개인 PBL 저장소(`es-pbl-<github-id>`)는 내 주제의 파일을 작성하고 commit·push·제출하는 곳입니다. Day 1에는 `README-template.md`, `SUBMISSION-template.md`, `pbl-start-card.md`를 각각 `README.md`, `SUBMISSION.md`, `docs/pbl-start-card.md`로 복사합니다. Day 2에는 `pbl-data-template/` 전체를 `data/pbl-data-template/`로, Day 3에는 `QUALITY_TEST_TEMPLATE.md`를 `docs/quality-test.md`로 복사합니다.
+개인 PBL 저장소(`es-pbl-<github-id>`)는 내 주제의 파일을 작성하고 commit·push·제출하는 곳입니다. Day 1에는 `README-template.md`, `SUBMISSION-template.md`, `pbl-start-card.md`, `data-model-template.md`, `dashboard-plan-template.md`를 각각 `README.md`, `SUBMISSION.md`, `docs/pbl-start-card.md`, `docs/data-model.md`, `docs/dashboard-plan.md`로 복사합니다. Day 2에는 `pbl-data-template/` 전체를 `data/pbl-data-template/`로, Day 3에는 `QUALITY_TEST_TEMPLATE.md`를 `docs/quality-test.md`로 복사합니다.
 
 학생이 직접 만드는 파일은 `elasticsearch/index-create.json`, `elasticsearch/requests.http`, `evidence/dashboard.png`이며, `kibana/dashboard.ndjson`은 선택 제출입니다. Day 3~5의 쇼핑몰 요청과 Dashboard 예시는 참고 자료이므로 개인 저장소로 그대로 복사하지 않습니다.
 

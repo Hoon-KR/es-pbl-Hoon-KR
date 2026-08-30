@@ -38,13 +38,13 @@ es-pbl-<github-id>/
 |---|---|---|
 | `README.md` | 프로젝트·사용자·문서 단위·검색 질문 3개·핵심 field/type 이유·데이터 규모·Dashboard 질문·AI Search 판단의 요약 | Day 1부터 매일 갱신 |
 | `docs/pbl-start-card.md` | 주제, 사용자, 문서 1건, 질문 3개, filter/sort 후보, Dashboard 질문 | Day 1 T01-2 |
-| `docs/data-model.md` | 대표 문서 3건(JSON), field 목록, field 목적, type 선택 이유, 개인정보 제외 판단 | Day 1 초안 → Day 2 T10~T11 확정 |
+| `docs/data-model.md` | `data-model-template.md`를 복사한 뒤 Day 1에는 대표 문서 1건(JSON)과 field 역할·type 후보를, Day 2에는 대표 문서 3건과 type 선택 이유를 기록 | Day 1 초안 → Day 2 T10~T11 확정 |
 | `elasticsearch/index-create.json` | 개인 index의 settings와 mappings을 포함한 실제 생성 요청 body | Day 2 T11~T12 |
 | `elasticsearch/requests.http` | 개인 index를 대상으로 실행한 `_analyze`, CRUD, search, aggregation, ES\|QL 요청. 토픽 제목 주석으로 구분 | Day 2부터 Day 5까지 |
 | `data/pbl-data-template/` | Day 2에 배포본에서 복사한 개인 데이터 생성기. `my-data-settings.ps1`만 자신의 데이터로 수정 | Day 2 T15 |
 | `data/generation-notes.md` | 데이터 건수, seed, 값 분포, 생성·Bulk 실행일, count/분포 검증 결과 | Day 2 T15 |
 | `docs/quality-test.md` | 질문 3개, 기대·제외·0건, 실제 결과, 개선 전후와 근거, 동료 재현 결과 | Day 1 품질 초안 → Day 3 T21 확정 |
-| `docs/dashboard-plan.md` | Dashboard 사용자, 차트 4개가 답하는 질문, 사용할 field/집계, control 목적, 배치 계획 | Day 1 초안 → Day 4 T22~T25 확정 |
+| `docs/dashboard-plan.md` | `dashboard-plan-template.md`를 복사한 뒤 Dashboard 사용자·목적·다음 행동, 차트 4개가 답하는 질문, 사용할 field/집계, control·시간 설정, 배치 계획을 기록 | Day 1 초안 → Day 4 T22~T25 확정 |
 | `kibana/dashboard.ndjson` | Saved Objects에서 export한 개인 Dashboard와 참조 객체 | Day 4, 선택 |
 | `evidence/day-01-environment.md` | `GET /`, cluster health, node 3개, Kibana 접속 확인 결과. 비밀번호·실제 `.env`는 제외 | Day 1 T07~T08 |
 | `evidence/day-02-data.md` | index/mapping 생성, count, 분포, CRUD, pipeline 판단의 실행 결과 또는 캡처 경로 | Day 2 |

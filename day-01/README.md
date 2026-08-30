@@ -31,9 +31,11 @@ Copy-Item "$course\day-01\README-template.md" "$pbl\README.md"
 Copy-Item "$course\day-01\SUBMISSION-template.md" "$pbl\SUBMISSION.md"
 New-Item -ItemType Directory -Force "$pbl\docs"
 Copy-Item "$course\day-01\pbl-start-card.md" "$pbl\docs\pbl-start-card.md"
+Copy-Item "$course\day-01\data-model-template.md" "$pbl\docs\data-model.md"
+Copy-Item "$course\day-01\dashboard-plan-template.md" "$pbl\docs\dashboard-plan.md"
 ```
 
-`README.md`와 `docs/pbl-start-card.md`는 Day 1에 내 주제로 작성합니다. `SUBMISSION.md`는 Day 5에 최종 commit SHA와 Dashboard 근거를 채웁니다.
+`README.md`, `docs/pbl-start-card.md`, `docs/data-model.md`, `docs/dashboard-plan.md`은 Day 1에 내 주제로 작성합니다. `docs/data-model.md`의 ES type 후보는 Day 2에 mapping으로 확정하고, `docs/dashboard-plan.md`의 실제 차트·control·증거는 Day 4에 확정합니다. `SUBMISSION.md`는 Day 5에 최종 commit SHA와 Dashboard 근거를 채웁니다.
 
 ### 이후 일자에 복사할 템플릿
 
