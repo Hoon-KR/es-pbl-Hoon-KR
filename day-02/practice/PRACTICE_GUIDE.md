@@ -1,6 +1,6 @@
-# Day 2 v1 실습·산출물 확인표
+# Day 2 실습·산출물 확인표
 
-69장 PPT와 [v1 교재](../student-workbook-v1.md) 기준. C는 공통, P는 개인 적용이다. S번호는 실제 PPT 번호다.
+69장 PPT와 [학생교재](../student-workbook.md) 기준. C는 공통, P는 개인 적용이다. S번호는 실제 PPT 번호다.
 
 | ID | PPT | 작업 | 완료 근거 |
 |---|---|---|---|

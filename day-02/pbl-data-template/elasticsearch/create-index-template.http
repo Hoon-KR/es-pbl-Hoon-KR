@@ -1,4 +1,4 @@
-# 도서 참고 예시. v1 개인 정본은 개인 루트 elasticsearch/index-create.json이다.
+# 도서 참고 예시. 개인 정본은 개인 루트 elasticsearch/index-create.json이다.
 # S33에서 이미 만든 index에는 이 PUT을 다시 실행하지 않는다. 없을 때만 생성한다.
 # index 이름과 properties가 my-data-settings.ps1의 field 이름·Kind와 맞는지 먼저 확인합니다.
 PUT /library-books

@@ -1,4 +1,4 @@
-# Day 2 v1 69장 수업의 공통 실행 요청. 파일을 통째로 실행하지 않습니다.
+# Day 2 69장 수업의 공통 실행 요청. 파일을 통째로 실행하지 않습니다.
 # 요청 하나씩 Kibana Dev Tools Console에 복사합니다.
 # S32 전체 생성 요청: ../data/requests/01-create-products.http (없을 때만 PUT).
 # S33 개인 index: 자기 elasticsearch/index-create.json과 requests.http 사용.

@@ -1,10 +1,16 @@
-# Day 2 v1 — 데이터 모델링과 적재
+# Day 2 — 데이터 모델링과 적재
 
 2026-09-01 배포. 현재 강의의 69장 PPT에 대응하는 학생용 자료다.
 
-[학생교재](student-workbook-v1.md) · [시작·제공 파일 지도](v1/README.md) · [실습·제출 확인표](v1/PRACTICE_GUIDE.md)
+[학생교재](student-workbook.md) · [시작·제공 파일 지도](practice/README.md) · [실습·제출 확인표](practice/PRACTICE_GUIDE.md)
 
-[공통 실행 요청](v1/lecture-requests.http) · [개인 데이터 생성 가이드](v1/DATA_GENERATION_GUIDE.md) · [작성 템플릿](v1/templates/README.md)
+[공통 실행 요청](practice/lecture-requests.http) · [개인 데이터 생성 가이드](practice/DATA_GENERATION_GUIDE.md) · [작성 템플릿](practice/templates/README.md)
+
+## 폴더별 역할
+
+- `practice/`: 실습 안내·공통 요청·학생 작성 양식
+- `data/`: 쇼핑몰 공통 데이터 생성·적재 파일
+- `pbl-data-template/`: 학생 개인 주제의 데이터 생성·검증·적재 도구
 
 ## 받는 방법
 
@@ -30,4 +36,4 @@ S32 공통 products 생성 → S33 개인 index 생성 → 분석 → CRUD → S
 - 개인 문서는 본인 저장소에 작성한다. 생성된 전체 개인 NDJSON은 제출하지 않고 코드·설정·대표3건·표본30건·요약·실제 검증 결과를 제출한다.
 - 실제 .env·비밀번호·인증 헤더는 공유하거나 제출하지 않는다. Day1 환경이 준비된 상태에서 진행한다.
 
-이번 패키지에는 **v1만** 포함한다. v2/workshop·이전 실습 파일·Day3~5 자료·강사용 PPT/대본/정답은 포함하지 않는다.
+이번 패키지는 현재 69장 수업용 자료다. 이전 실습 파일·Day3~5 자료·강사용 PPT/대본/정답은 포함하지 않는다.

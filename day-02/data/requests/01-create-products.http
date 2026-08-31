@@ -1,6 +1,6 @@
 ### V1-T12-C · S32 공통 생성. GET /products로 확인하고 없을 때만 PUT한다.
 # 기존 products는 삭제하지 않는다. 이미 존재하면 mapping/count/분포를 확인한다.
-# v1 수업에서는 v1/lecture-requests.http를 사용한다. workshop은 별도 v2 구성이다.
+# 공통 수업 요청은 day-02/practice/lecture-requests.http를 사용한다.
 
 ### 3 primary shards + 1 replica, 공통 mapping 생성
 PUT /products

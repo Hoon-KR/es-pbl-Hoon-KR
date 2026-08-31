@@ -1,6 +1,6 @@
-# Day 2 v1 — 69장 수업 시작 안내
+# Day 2 실습 안내 — 시작과 제공 파일
 
-[학생교재](../student-workbook-v1.md) · [실습 확인표](PRACTICE_GUIDE.md) · [데이터 생성](DATA_GENERATION_GUIDE.md) · [작성 템플릿](templates/README.md)
+[학생교재](../student-workbook.md) · [실습 확인표](PRACTICE_GUIDE.md) · [데이터 생성](DATA_GENERATION_GUIDE.md) · [작성 템플릿](templates/README.md)
 
 ## 두 저장소
 
@@ -10,14 +10,14 @@
 
 | 제공 경로 | 내용 / 사용 |
 |---|---|
-| student-workbook-v1.md | T09~16 개념·수행 절차·확인 기준 |
-| v1/lecture-requests.http | CAT·분석·CRUD·분포·pipeline 공통 요청 |
+| student-workbook.md | T09~16 개념·수행 절차·확인 기준 |
+| practice/lecture-requests.http | CAT·분석·CRUD·분포·pipeline 공통 요청 |
 | data/product-mapping.json | 공통12field·strict·3/1·analyzer 생성 body, S26 |
 | data/requests/01-create-products.http | 완전한 공통 PUT, S32 |
 | data/generator/generate-products.ps1 | 공통10000 생성, S57 |
 | data/load-products.ps1 | 공통 Bulk 전송, S57 |
 | pbl-data-template/ 전체 | 개인 생성·검증·적재 도구, S59·67 |
-| v1/templates/ | 개인 문서 작성 양식, S3 이후 |
+| practice/templates/ | 개인 문서 작성 양식, S3 이후 |
 
 공개된 Day2 자료를 받은 뒤 위 파일이 있는지 확인한다. 제공 파일이 없다면 강사에게 배포 상태를 질문한다. 생성 NDJSON이 없는 것은 해당 생성기를 실행해 해결하며 빈 NDJSON을 만들지 않는다.
 

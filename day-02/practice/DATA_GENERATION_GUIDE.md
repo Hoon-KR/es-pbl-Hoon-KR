@@ -1,6 +1,6 @@
-# Day 2 v1 개인 대량 데이터 생성 가이드
+# Day 2 개인 대량 데이터 생성 가이드
 
-[교재 T15~16](../student-workbook-v1.md) · [실습 확인표](PRACTICE_GUIDE.md)
+[교재 T15~16](../student-workbook.md) · [실습 확인표](PRACTICE_GUIDE.md)
 
 ## 1. 누가 무엇을 준비하나
 
