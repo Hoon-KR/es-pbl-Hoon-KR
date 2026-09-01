@@ -1,0 +1,26 @@
+[
+  {
+    "prd_id": "P-0001",
+    "prd_nm": "SoundLab 무선 이어폰",
+    "in_stock": true,
+    "category": "전자기기",
+    "price": 89000,
+    "qty_score": 4.7
+  },
+  {
+    "prd_id": "P-0002",
+    "prd_nm": "Auralis 무선 헤드폰",
+    "in_stock": true,
+    "category": "전자기기",
+    "price": 200000,
+    "qty_score": 4.5
+  },
+  {
+    "prd_id": "P-0003",
+    "prd_nm": "SimpleDay 유선 이어폰",
+    "in_stock": false,
+    "category": "전자기기",
+    "price": 49900,
+    "qty_score": 4.2
+  }
+]
