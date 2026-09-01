@@ -1,0 +1,29 @@
+{
+  "settings": {
+    "number_of_shards": 1,
+    "number_of_replicas": 1
+  },
+  "mappings": {
+    "dynamic": "strict",
+    "properties": {
+      "prd_id": {
+        "type": "keyword"
+      },
+      "prd_nm": {
+        "type": "text"
+      },
+      "in_stock": {
+        "type": "boolean"
+      },
+      "category": {
+        "type": "keyword"
+      },
+      "price": {
+        "type": "integer"
+      },
+      "qty_score": {
+        "type": "float"
+      }
+    }
+  }
+}
