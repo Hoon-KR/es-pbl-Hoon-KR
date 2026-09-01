@@ -10,6 +10,10 @@
 
 ## 일별 자료
 
+현재 공개: [Day 1](day-01/README.md), **[Day 2](day-02/README.md)**. Day3~5는 아래 예정에 따라 순차 공개한다.
+
+Day1에 clone한 배포 저장소에서 `git pull --ff-only origin main`을 실행하면 Day2가 추가된다. 개인 PBL 저장소와 구분한다.
+
 | 폴더 | 공개 시점 | 내용 |
 |---|---|---|
 | `day-01/` | 1일 차 전날 | 과정·PBL 시작, Docker, 첫 REST 요청 |
