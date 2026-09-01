@@ -10,11 +10,13 @@
 
 ## 일별 자료
 
-현재 공개: [Day 1](day-01/README.md), **[Day 2](day-02/README.md)**. Day3~5는 아래 예정에 따라 순차 공개한다.
+현재 공개: [Day 1](day-01/README.md), [Day 2](day-02/README.md), **[Day 3](day-03/README.md)**. Day4~5는 아래 예정에 따라 순차 공개한다.
 
-Day1에 clone한 배포 저장소에서 `git pull --ff-only origin main`을 실행하면 Day2가 추가된다. 개인 PBL 저장소와 구분한다.
+Day1에 clone한 배포 저장소에서 `git pull --ff-only origin main`을 실행하면 Day3 자료까지 추가된다. 개인 PBL 저장소와 구분한다.
 
 Day 2 실습을 마친 뒤 [Day 2 데이터 준비 결과 양식](evidence/day-02-data.md)을 개인 PBL 저장소의 같은 경로에 복사해 실제 결과를 작성하고 commit·push한다.
+
+Day 3에는 [검색 실습 안내](day-03/README.md)를 따라 공통 요청 24개를 실행하고, 개인 PBL 저장소의 `elasticsearch/requests/day-03-search.http`와 `evidence/day-03-search.md`를 완성한다.
 
 | 폴더 | 공개 시점 | 내용 |
 |---|---|---|

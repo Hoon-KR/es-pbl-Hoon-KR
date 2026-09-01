@@ -1,5 +1,13 @@
 # 학생 배포 변경 기록
 
+## 2026-09-01 — Day 3 검색·품질 실습 공개
+
+- Day 3 학생교재와 수업 진입 README를 추가했다.
+- Search API, term/match, multi_match/match_phrase, filter/range, bool, sort/highlight, 0건 진단, 개인 PBL 통합을 교시별로 구성했다.
+- 공통 요청 24개와 검색 품질 점검표를 제공한다. 모든 JSON body의 정적 파싱을 확인했다.
+- 개인 산출물은 `elasticsearch/requests/day-03-search.http`와 `evidence/day-03-search.md`다.
+- 실제 `.env`, 비밀번호, 강사용 PPT·대본·정답, Day4~5 자료는 포함하지 않았다.
+
 ## 2026-09-01 — Day 2 폴더·교재 이름 정리
 
 - 버전명 대신 내용을 드러내도록 `day-02/v1/`을 `day-02/practice/`(실습 안내·요청·작성 양식)로 변경했다.
