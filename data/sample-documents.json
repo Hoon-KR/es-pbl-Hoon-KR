@@ -1,0 +1,26 @@
+[
+  {
+    "prd_id": "P-0001",
+    "prd_nm": "Soundcore Liberty 4 NC 무선 이어폰",
+    "in_stock": true,
+    "category": "전자기기",
+    "price": 129000,
+    "qty_score": 4.7
+  },
+  {
+    "prd_id": "P-0002",
+    "prd_nm": "JBL Live Beam 3 무선 이어폰",
+    "in_stock": true,
+    "category": "전자기기",
+    "price": 200000,
+    "qty_score": 4.5
+  },
+  {
+    "prd_id": "P-0003",
+    "prd_nm": "Samsung USB-C 유선 이어폰",
+    "in_stock": false,
+    "category": "전자기기",
+    "price": 29900,
+    "qty_score": 4.2
+  }
+]
