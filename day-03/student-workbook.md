@@ -619,24 +619,26 @@ GET /products/_search
 
 ## 교시별 실습 운영표
 
-모든 교시는 강사 시연을 본 뒤 끝나는 방식이 아닙니다. 공통 요청 실행, 한 요소 변형 또는 반례, 개인 PBL 적용, evidence 기록까지 수행합니다.
+모든 교시는 강사 시연을 본 뒤 끝나는 방식이 아닙니다. [`practice/`](practice/README.md)의 해당 교시 문제지를 개인 저장소 `evidence/day-03-practice/`에 복사하고, 제공 코드 실행 1문제·공통 API 직접 구현 2문제·개인 PBL 구현 2문제에 답합니다.
 
-| 교시 | 기본 실행 | +α 고민 과제 | 검증 방식 | 최종 골 |
-|---:|---|---|---|---|
-| 1 | P01 match_all·size·_source | 카드에 필요한 최소 field 결정 | total과 반환 배열 길이 비교 | 개인 첫 검색 요청 |
-| 2 | P02 term·match | text에 term을 쓴 결과 원인 설명 | mapping·대표 hit·token 근거 | 정확·전문 요청 각 1개 |
-| 3 | P03 multi_match·phrase | boost 전후 상위 3건 사람 평가 | 같은 검색어·size 유지 | 전문 검색 확장 요청 |
-| 4 | P04 filter·range | gt/lt 경계와 fixture 설계 | 포함·제외 ID 사전 기록 | filter 2개 이상·경계 결과 |
-| 5 | P05 bool | filter 하나씩 제거, should 조건 판정 | 새로 들어온 문서와 total 변화 | 개인 bool·변화표 |
-| 6 | P06 sort·highlight | 카드 최소 field와 정렬 우선순위 설계 | 동률 문서·highlight·_source 대조 | sort 2개·카드 설계 |
-| 7 | P07 질문 3개 품질 검사 | 실패 원인 하나를 증거로 진단 | 기대·제외·0건·상위 3건 | evidence 3행·원인 1건 |
-| 8 | P08 개선 전후·최종 통합 | 좋아졌다는 기준을 사용자 관점으로 정의 | 한 요소만 변경·같은 조건 재실행 | 요청·evidence·README·commit |
+| 교시 | 문제지 | 공통 문제 1~3 | 개인 문제 4~5 | 합계 |
+|---:|---|---|---|---:|
+| 1 | [Search API 기본](practice/period-01-search-api.md) | 응답 읽기·반환 field·정렬 전체 조회 | 자기 첫 요청·결과 카드 | 5 |
+| 2 | [term과 match](practice/period-02-term-match.md) | 정확 조건·전문 검색·부적절한 조합 비교 | 자기 정확·전문 검색 | 5 |
+| 3 | [전문 검색 확장](practice/period-03-full-text.md) | multi_match·boost·phrase | 자기 다중 field·가설 검증 | 5 |
+| 4 | [정확 조건과 경계](practice/period-04-filter-range.md) | 세 filter·포함 경계·제외 경계 | 자기 정확 조건·범위 실험 | 5 |
+| 5 | [bool 검색](practice/period-05-bool.md) | must/filter·조건 제거·should | 자기 bool·조건 역할 검증 | 5 |
+| 6 | [정렬·highlight](practice/period-06-sort-highlight.md) | 1·2차 정렬·우선순위 교환·highlight | 자기 카드·표시 최적화 | 5 |
+| 7 | [검색 품질](practice/period-07-quality.md) | 상위 결과·정확 조건·의도한 0건 | 자기 질문 3개·실패 진단 | 5 |
+| 8 | [통합·개선](practice/period-08-integration.md) | 통합 검증·boost 전후·요구사항 구현 | 자기 개선·최종 재현 | 5 |
+| **합계** |  | **24** | **16** | **40** |
 
 ### 개인 요청 작성 규칙
 
-1. 공통 `04-search-and-quality.http`에서 해당 교시의 P번호 요청을 찾습니다.
-2. Day 1·2부터 사용한 개인 저장소 루트 `requests.http`에 사용자 질문과 `V1-T17-P`~`V1-T21-P` 요청 ID를 주석으로 작성합니다.
-3. 자기 index·field·실제 값으로 바꿉니다.
-4. 실행 전에 기대 문서·제외 문서·경계 또는 0건 기준을 적습니다.
-5. 실행 후 `docs/quality-test.md`에 질문별 기대·실제·판정을 완성하고, `evidence/day-03-search.md`에 핵심 결과와 개선 전후를 요약합니다.
-6. 예상과 다르면 data를 바꾸기 전에 mapping→저장값→analyzer→query→filter→sort 순으로 한 단계씩 확인합니다.
+1. `practice/`에서 해당 교시 문제지를 열고 문제 1~5에 순서대로 답합니다.
+2. 코드 미제공 문제는 실행 가능한 Search API 전체를 답안 코드 블록에 작성합니다.
+3. 개인 문제의 완성 요청은 Day 1·2부터 사용한 개인 저장소 루트 `requests.http`에 사용자 질문과 `V1-T17-P`~`V1-T21-P` 요청 ID를 주석으로 정리합니다.
+4. 자기 index·field·실제 값을 사용합니다.
+5. 실행 전에 기대 문서·제외 문서·경계 또는 0건 기준을 적습니다.
+6. 실행 후 `docs/quality-test.md`에 질문별 기대·실제·판정을 완성하고, `evidence/day-03-search.md`에 핵심 결과와 개선 전후를 요약합니다.
+7. 예상과 다르면 data를 바꾸기 전에 mapping→저장값→analyzer→query→filter→sort 순으로 한 단계씩 확인합니다.
