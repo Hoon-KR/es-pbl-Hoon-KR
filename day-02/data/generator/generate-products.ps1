@@ -2,7 +2,7 @@
 param(
   [int]$Count = 10000,
   [int]$Seed = 9502026,
-  [string]$Index = 'products',
+  [string]$Index = 'audio-devices-search',
   [string]$OutputDir
 )
 
@@ -19,22 +19,24 @@ $bulkPath = Join-Path $OutputDir ("{0}-{1}.ndjson" -f $Index,$Count)
 $samplePath = Join-Path $OutputDir ("{0}-sample-30.ndjson" -f $Index)
 $summaryPath = Join-Path $OutputDir 'generation-summary.json'
 $rng = [System.Random]::new($Seed)
-$start = [datetime]::Parse('2025-08-27T00:00:00Z').ToUniversalTime()
-$end = [datetime]::Parse('2026-08-26T23:59:59Z').ToUniversalTime()
 
 $catalog = [ordered]@{
-  '전자기기' = @{ brands = @('SoundLab','NeoTech','PixelWorks','Auralis','MobiCore'); items = @('무선 이어폰','노이즈 캔슬링 헤드폰','블루투스 스피커','기계식 키보드','휴대용 충전기'); uses = @('통학','재택 학습','음악 감상','온라인 회의','여행'); tags = @('무선','블루투스','USB-C','휴대용','노이즈 캔슬링'); min = 19000; max = 429000 }
-  '생활' = @{ brands = @('HomeNest','DailyForm','CleanMate','LumiHome','SimpleDay'); items = @('스테인리스 텀블러','무선 청소기','수납 정리함','LED 스탠드','주방 저울'); uses = @('자취','신혼','공부방','주방 정리','선물'); tags = @('실용','정리','친환경','미니멀','선물'); min = 8900; max = 279000 }
-  '패션' = @{ brands = @('UrbanStep','Morrow','Dayfit','PlainMood','LoopWear'); items = @('오버핏 후드','데일리 백팩','러닝화','코튼 셔츠','니트 가디건'); uses = @('캠퍼스','출근','주말 외출','운동','여행'); tags = @('데일리','베이직','가벼운 착용감','사계절','선물'); min = 24000; max = 198000 }
-  '스포츠' = @{ brands = @('PeakRun','ActiveLine','TrailMove','FlexPro','WaveFit'); items = @('요가 매트','러닝 벨트','덤벨 세트','등산 스틱','물병'); uses = @('홈트','러닝','등산','헬스장','주말 운동'); tags = @('운동','경량','내구성','초보자','야외'); min = 12000; max = 249000 }
-  '도서' = @{ brands = @('한빛책방','문장숲','지식마루','오늘의책','북웨이브'); items = @('데이터 분석 입문','여행 에세이','자기계발 도서','소설','요리 레시피북'); uses = @('학습','휴식','취미','선물','독서 모임'); tags = @('베스트셀러','입문','추천','국내도서','ebook'); min = 9800; max = 48000 }
-  '뷰티' = @{ brands = @('PureBloom','GlowLab','SkinNote','MildLeaf','DewyDay'); items = @('수분 크림','선크림','클렌징 폼','립 틴트','세럼'); uses = @('데일리 케어','여행','선물','민감 피부','메이크업'); tags = @('보습','저자극','비건','휴대용','기초케어'); min = 7900; max = 89000 }
-  '식품' = @{ brands = @('온담','그레인픽','한끼연구소','FreshTable','달콤상점'); items = @('드립백 커피','견과류 세트','그래놀라','무설탕 간식','차 선물세트'); uses = @('아침','사무실','간식','선물','캠핑'); tags = @('건강','간편식','국산','무설탕','선물'); min = 5900; max = 74000 }
-  '반려동물' = @{ brands = @('PawStory','멍냥생활','PetBalance','HappyTail','냥이마켓'); items = @('반려견 사료','고양이 모래','자동 급수기','산책 리드줄','장난감 세트'); uses = @('실내 생활','산책','건강 관리','선물','초보 보호자'); tags = @('반려견','반려묘','안전','내구성','정기구매'); min = 6900; max = 219000 }
+  '이어폰' = @{ brands = @('Sony','Apple','Samsung','JBL','QCY'); items = @('인이어 이어폰','오픈형 이어폰','스포츠 이어폰'); features = @('노이즈 캔슬링','방수','멀티포인트','고음질','전용앱'); connection = @('무선','완전무선','유선'); min = 15000; max = 350000 }
+  '헤드폰' = @{ brands = @('Sony','Bose','Sennheiser','Apple','Anker'); items = @('오버이어 헤드폰','온이어 헤드폰','스튜디오 헤드폰'); features = @('노이즈 캔슬링','공간음향','멀티포인트','고해상도오디오','접이식'); connection = @('무선','유선'); min = 50000; max = 600000 }
+  '헤드셋' = @{ brands = @('Logitech','Razer','HyperX','Corsair','JBL'); items = @('게이밍 헤드셋','오피스 헤드셋','방송용 헤드셋'); features = @('마이크노이즈캔슬링','가상7.1채널','RGB라이팅','무선충전','가벼운무게'); connection = @('무선','유선'); min = 30000; max = 400000 }
 }
 
+$reviews = @(
+  '저음이 강조되고 운동용으로 딱입니다.',
+  '노이즈 캔슬링이 완벽해서 작업할 때 좋아요.',
+  '10만원 이하 가성비 제품 중에서는 최고입니다.',
+  '배터리가 오래가서 충전 스트레스가 없어요.',
+  '음질은 무난하지만 착용감이 정말 편안합니다.',
+  '통화 품질이 좋아서 회의할 때 자주 씁니다.',
+  '디자인이 예쁘고 공간음향 기능이 아주 좋습니다.'
+)
+
 function Pick([object[]]$Values) { return $Values[$rng.Next($Values.Count)] }
-function To-Iso([datetime]$Value) { return $Value.ToUniversalTime().ToString('yyyy-MM-ddTHH:mm:ssZ') }
 function Write-BulkPair($Writer, $Document) {
   $action = [ordered]@{ index = [ordered]@{ _index = $Index; _id = $Document.product_id } }
   $Writer.WriteLine(($action | ConvertTo-Json -Compress))
@@ -50,28 +52,25 @@ try {
   for ($number = 1; $number -le $Count; $number++) {
     $category = $categories[($number - 1) % $categories.Count]
     $spec = $catalog[$category]
-    # Whole seconds avoid .NET Framework vs modern .NET fractional rounding differences.
-    $created = $start.AddSeconds([math]::Floor($rng.NextDouble() * ($end - $start).TotalSeconds))
     $priceMin = [int]([math]::Floor($spec.min / 100) * 100)
     $priceMax = [int]([math]::Floor($spec.max / 100) * 100)
-    $tags = @($spec.tags | Sort-Object { $rng.Next() } | Select-Object -First (2 + $rng.Next(3)))
+    
+    $selectedBrand = Pick $spec.brands
+    $features = @($spec.features | Sort-Object { $rng.Next() } | Select-Object -First (1 + $rng.Next(3)))
+    
     $document = [ordered]@{
-      product_id = ('P-{0:d5}' -f $number)
-      name = ('{0} {1} {2}' -f (Pick $spec.brands), (Pick @('프리미엄','실속형','컴팩트','데일리','스마트')), (Pick $spec.items))
-      description = ('{0}에 잘 어울리는 {1} 상품입니다. 사용 편의성과 실용성을 함께 고려했습니다.' -f (Pick $spec.uses), $category)
+      product_id = ('AD-{0:d5}' -f $number)
+      product_name = ('{0} {1} {2}' -f $selectedBrand, (Pick @('프로','에디션','스탠다드','플러스','에어')), (Pick $spec.items))
+      brand = $selectedBrand
       category = $category
-      brand = $null
+      connection = Pick $spec.connection
       price = $rng.Next($priceMin / 100, ($priceMax / 100) + 1) * 100
-      rating = [math]::Round((2.0 + $rng.NextDouble() * 3.0), 1)
-      review_count = [int](-[math]::Log(1.0 - $rng.NextDouble()) * 180) + $rng.Next(30)
-      in_stock = ($rng.NextDouble() -lt 0.85)
-      tags = $tags
-      created_at = To-Iso $created
-      updated_at = To-Iso ($created.AddDays($rng.Next(31)))
+      features = $features
+      battery_hours = $rng.Next(5, 81)
+      rating = [math]::Round((3.0 + $rng.NextDouble() * 2.0), 1)
+      review_summary = Pick $reviews
     }
-    $document.brand = (($document.name -split ' ')[0])
-    if ($rng.NextDouble() -lt 0.03) { $document.Remove('tags') }
-    if ($rng.NextDouble() -lt 0.05) { $document.Remove('updated_at') }
+    
     Write-BulkPair $bulkWriter $document
     if ($number -le 30) { Write-BulkPair $sampleWriter $document }
     $categoryCounts[$category]++
@@ -88,7 +87,6 @@ $summary = [ordered]@{
   files = [ordered]@{ bulk = (Split-Path -Leaf $bulkPath); sample = (Split-Path -Leaf $samplePath) }
   category_counts = $categoryCounts
   generated_at = 'deterministic-from-seed'
-  optional_field_exceptions = [ordered]@{ tags_missing_ratio = 0.03; updated_at_missing_ratio = 0.05 }
 }
 [System.IO.File]::WriteAllText($summaryPath, (($summary | ConvertTo-Json -Depth 5) + [Environment]::NewLine), $utf8NoBom)
 $summary | ConvertTo-Json -Depth 5
