@@ -6,23 +6,35 @@
   "mappings": {
     "dynamic": "strict",
     "properties": {
-      "prd_id": {
+      "product_id": {
         "type": "keyword"
       },
-      "prd_nm": {
+      "product_name": {
         "type": "text"
       },
-      "in_stock": {
-        "type": "boolean"
+      "brand": {
+        "type": "keyword"
       },
       "category": {
+        "type": "keyword"
+      },
+      "connection": {
         "type": "keyword"
       },
       "price": {
         "type": "integer"
       },
-      "qty_score": {
+      "features": {
+        "type": "keyword"
+      },
+      "battery_hours": {
+        "type": "integer"
+      },
+      "rating": {
         "type": "float"
+      },
+      "review_summary": {
+        "type": "text"
       }
     }
   }
