@@ -16,7 +16,7 @@ Day1에 clone한 배포 저장소에서 `git pull --ff-only origin main`을 실�
 
 Day 2 실습을 마친 뒤 [Day 2 데이터 준비 결과 양식](evidence/day-02-data.md)을 개인 PBL 저장소의 같은 경로에 복사해 실제 결과를 작성하고 commit·push한다.
 
-Day 3에는 [검색 실습 안내](day-03/README.md)를 따라 공통 요청 24개를 실행하고, 개인 PBL 저장소의 `elasticsearch/requests/day-03-search.http`와 `evidence/day-03-search.md`를 완성한다.
+Day 3에는 [검색 실습 안내](day-03/README.md)를 따라 공통 요청 24개를 실행하고, 개인 PBL 저장소의 루트 `requests.http`에 `V1-T17-P`~`V1-T21-P` 요청을 추가한다. 검색 품질 상세 기록은 `docs/quality-test.md`, 일일 요약은 `evidence/day-03-search.md`에 완성한다.
 
 | 폴더 | 공개 시점 | 내용 |
 |---|---|---|

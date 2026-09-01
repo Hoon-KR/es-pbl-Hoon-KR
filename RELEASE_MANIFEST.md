@@ -16,7 +16,7 @@
 
 - 학생교재, 검색 품질 점검표, 개인 evidence 양식을 공개한다.
 - 공통 요청은 8교시×기본·변형·반례 3개, 총 24개다.
-- 학생 최종 경로는 `elasticsearch/requests/day-03-search.http`, `evidence/day-03-search.md`다.
+- 학생 최종 경로는 루트 `requests.http`(`V1-T17-P`~`V1-T21-P`), `docs/quality-test.md`, `evidence/day-03-search.md`다.
 - 강사용 PPT·대본·정답·실제 인증정보·Day4~5 자료는 제외한다.
 
 ## 2026-09-01 — Day 2 v1

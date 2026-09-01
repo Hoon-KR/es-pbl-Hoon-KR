@@ -6,7 +6,8 @@
 
 - 개인 index:
 - 수업 시작 시 실제 `_count`:
-- 개인 요청 파일: `elasticsearch/requests/day-03-search.http`
+- 개인 요청 파일: `requests.http` (`V1-T17-P`~`V1-T21-P` 구간)
+- 검색 품질 주 문서: `docs/quality-test.md`
 - 실행 환경·시각:
 
 ## 2. 검색 질문과 요구사항

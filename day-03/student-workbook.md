@@ -24,6 +24,8 @@
 
 - `requests/04-search-and-quality.http`
 - `QUALITY_TEST_TEMPLATE.md`
+- 개인 저장소 루트 `requests.http`
+- `docs/quality-test.md`
 - `evidence/day-03-search.md`
 
 ## 목차
@@ -633,9 +635,8 @@ GET /products/_search
 ### 개인 요청 작성 규칙
 
 1. 공통 `04-search-and-quality.http`에서 해당 교시의 P번호 요청을 찾습니다.
-2. 개인 파일 `elasticsearch/requests/day-03-search.http`에 사용자 질문과 요청 ID를 주석으로 작성합니다.
+2. Day 1·2부터 사용한 개인 저장소 루트 `requests.http`에 사용자 질문과 `V1-T17-P`~`V1-T21-P` 요청 ID를 주석으로 작성합니다.
 3. 자기 index·field·실제 값으로 바꿉니다.
 4. 실행 전에 기대 문서·제외 문서·경계 또는 0건 기준을 적습니다.
-5. 실행 후 `evidence/day-03-search.md`에 실제 결과와 판정을 기록합니다.
+5. 실행 후 `docs/quality-test.md`에 질문별 기대·실제·판정을 완성하고, `evidence/day-03-search.md`에 핵심 결과와 개선 전후를 요약합니다.
 6. 예상과 다르면 data를 바꾸기 전에 mapping→저장값→analyzer→query→filter→sort 순으로 한 단계씩 확인합니다.
-
