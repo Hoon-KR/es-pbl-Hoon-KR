@@ -12,16 +12,16 @@ GET /_cat/indices?v
 ### V1-T09-P · index 생성 후 mapping 확인 요청
 
 # index 생성 전에는 404 index_not_found_exception이 정상일 수 있다.
-GET /products/_mapping
+GET /my-products/_mapping
 
 ### V1-T12-P · 존재 확인
 
 # 다음 교시에 먼저 실행한다. 이미 존재하면 아래 PUT을 실행하지 않는다.
-GET /products
+GET /my-products
 
 ### V1-T12-P · index가 없을 때만 생성
 
-PUT /products
+PUT /my-products
 {
   "settings": {
     "number_of_shards": 1,
@@ -54,10 +54,10 @@ PUT /products
 
 ### V1-T12-P · 생성 후 검증
 
-GET /products
+GET /my-products
 
-GET /products/_mapping
+GET /my-products/_mapping
 
-GET /products/_count
+GET /my-products/_count
 
-GET /_cat/shards/products?v
+GET /_cat/shards/my-products?v
