@@ -1,0 +1,60 @@
+{"index":{"_index":"audio-devices-search","_id":"AD-00001"}}
+{"product_id":"AD-00001","product_name":"JBL 플러스 인이어 이어폰","brand":"JBL","category":"이어폰","connection":"유선","price":324400,"features":["고음질"],"battery_hours":37,"rating":3.9,"review_summary":"배터리가 오래가서 충전 스트레스가 없어요."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00002"}}
+{"product_id":"AD-00002","product_name":"Anker 스탠다드 스튜디오 헤드폰","brand":"Anker","category":"헤드폰","connection":"유선","price":345600,"features":["접이식","고해상도오디오","멀티포인트"],"battery_hours":21,"rating":4.9,"review_summary":"음질은 무난하지만 착용감이 정말 편안합니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00003"}}
+{"product_id":"AD-00003","product_name":"Corsair 플러스 방송용 헤드셋","brand":"Corsair","category":"헤드셋","connection":"유선","price":190800,"features":["가벼운무게","RGB라이팅","마이크노이즈캔슬링"],"battery_hours":48,"rating":3.7,"review_summary":"저음이 강조되고 운동용으로 딱입니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00004"}}
+{"product_id":"AD-00004","product_name":"QCY 프로 스포츠 이어폰","brand":"QCY","category":"이어폰","connection":"무선","price":200000,"features":["고음질","멀티포인트"],"battery_hours":73,"rating":4.3,"review_summary":"저음이 강조되고 운동용으로 딱입니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00005"}}
+{"product_id":"AD-00005","product_name":"Sony 스탠다드 오버이어 헤드폰","brand":"Sony","category":"헤드폰","connection":"유선","price":458400,"features":["접이식"],"battery_hours":62,"rating":4.1,"review_summary":"저음이 강조되고 운동용으로 딱입니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00006"}}
+{"product_id":"AD-00006","product_name":"Logitech 스탠다드 방송용 헤드셋","brand":"Logitech","category":"헤드셋","connection":"무선","price":367500,"features":["무선충전","마이크노이즈캔슬링","가벼운무게"],"battery_hours":64,"rating":3.6,"review_summary":"음질은 무난하지만 착용감이 정말 편안합니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00007"}}
+{"product_id":"AD-00007","product_name":"Sony 스탠다드 오픈형 이어폰","brand":"Sony","category":"이어폰","connection":"무선","price":118000,"features":["멀티포인트","노이즈 캔슬링"],"battery_hours":56,"rating":5,"review_summary":"배터리가 오래가서 충전 스트레스가 없어요."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00008"}}
+{"product_id":"AD-00008","product_name":"Sennheiser 에어 스튜디오 헤드폰","brand":"Sennheiser","category":"헤드폰","connection":"유선","price":87600,"features":["고해상도오디오","공간음향","노이즈 캔슬링"],"battery_hours":48,"rating":4,"review_summary":"음질은 무난하지만 착용감이 정말 편안합니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00009"}}
+{"product_id":"AD-00009","product_name":"Razer 스탠다드 오피스 헤드셋","brand":"Razer","category":"헤드셋","connection":"유선","price":295200,"features":["마이크노이즈캔슬링"],"battery_hours":56,"rating":4.1,"review_summary":"음질은 무난하지만 착용감이 정말 편안합니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00010"}}
+{"product_id":"AD-00010","product_name":"Apple 에어 오픈형 이어폰","brand":"Apple","category":"이어폰","connection":"완전무선","price":62300,"features":["멀티포인트"],"battery_hours":15,"rating":4.4,"review_summary":"저음이 강조되고 운동용으로 딱입니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00011"}}
+{"product_id":"AD-00011","product_name":"Apple 스탠다드 스튜디오 헤드폰","brand":"Apple","category":"헤드폰","connection":"유선","price":230100,"features":["접이식","멀티포인트"],"battery_hours":43,"rating":3.3,"review_summary":"디자인이 예쁘고 공간음향 기능이 아주 좋습니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00012"}}
+{"product_id":"AD-00012","product_name":"Razer 플러스 오피스 헤드셋","brand":"Razer","category":"헤드셋","connection":"유선","price":205800,"features":["무선충전","RGB라이팅"],"battery_hours":36,"rating":4.4,"review_summary":"배터리가 오래가서 충전 스트레스가 없어요."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00013"}}
+{"product_id":"AD-00013","product_name":"Samsung 프로 인이어 이어폰","brand":"Samsung","category":"이어폰","connection":"무선","price":118400,"features":["방수","고음질","노이즈 캔슬링"],"battery_hours":58,"rating":4,"review_summary":"통화 품질이 좋아서 회의할 때 자주 씁니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00014"}}
+{"product_id":"AD-00014","product_name":"Sony 에어 온이어 헤드폰","brand":"Sony","category":"헤드폰","connection":"무선","price":327300,"features":["고해상도오디오","공간음향"],"battery_hours":42,"rating":3.8,"review_summary":"디자인이 예쁘고 공간음향 기능이 아주 좋습니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00015"}}
+{"product_id":"AD-00015","product_name":"JBL 에어 오피스 헤드셋","brand":"JBL","category":"헤드셋","connection":"무선","price":311700,"features":["RGB라이팅","무선충전","가벼운무게"],"battery_hours":73,"rating":5,"review_summary":"저음이 강조되고 운동용으로 딱입니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00016"}}
+{"product_id":"AD-00016","product_name":"Samsung 프로 인이어 이어폰","brand":"Samsung","category":"이어폰","connection":"유선","price":164500,"features":["전용앱","노이즈 캔슬링"],"battery_hours":50,"rating":4.6,"review_summary":"음질은 무난하지만 착용감이 정말 편안합니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00017"}}
+{"product_id":"AD-00017","product_name":"Bose 스탠다드 오버이어 헤드폰","brand":"Bose","category":"헤드폰","connection":"무선","price":359400,"features":["고해상도오디오"],"battery_hours":69,"rating":4.8,"review_summary":"노이즈 캔슬링이 완벽해서 작업할 때 좋아요."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00018"}}
+{"product_id":"AD-00018","product_name":"Logitech 에어 오피스 헤드셋","brand":"Logitech","category":"헤드셋","connection":"유선","price":316700,"features":["가상7.1채널","RGB라이팅","가벼운무게"],"battery_hours":39,"rating":3.6,"review_summary":"음질은 무난하지만 착용감이 정말 편안합니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00019"}}
+{"product_id":"AD-00019","product_name":"JBL 에디션 오픈형 이어폰","brand":"JBL","category":"이어폰","connection":"완전무선","price":33400,"features":["고음질"],"battery_hours":77,"rating":4.4,"review_summary":"디자인이 예쁘고 공간음향 기능이 아주 좋습니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00020"}}
+{"product_id":"AD-00020","product_name":"Bose 에디션 오버이어 헤드폰","brand":"Bose","category":"헤드폰","connection":"무선","price":296800,"features":["멀티포인트"],"battery_hours":21,"rating":3.4,"review_summary":"10만원 이하 가성비 제품 중에서는 최고입니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00021"}}
+{"product_id":"AD-00021","product_name":"Corsair 프로 방송용 헤드셋","brand":"Corsair","category":"헤드셋","connection":"무선","price":32200,"features":["가상7.1채널"],"battery_hours":60,"rating":4.4,"review_summary":"통화 품질이 좋아서 회의할 때 자주 씁니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00022"}}
+{"product_id":"AD-00022","product_name":"Apple 에디션 인이어 이어폰","brand":"Apple","category":"이어폰","connection":"유선","price":158400,"features":["노이즈 캔슬링"],"battery_hours":77,"rating":4.2,"review_summary":"10만원 이하 가성비 제품 중에서는 최고입니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00023"}}
+{"product_id":"AD-00023","product_name":"Sony 에디션 오버이어 헤드폰","brand":"Sony","category":"헤드폰","connection":"유선","price":178000,"features":["노이즈 캔슬링"],"battery_hours":6,"rating":3.5,"review_summary":"노이즈 캔슬링이 완벽해서 작업할 때 좋아요."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00024"}}
+{"product_id":"AD-00024","product_name":"HyperX 플러스 오피스 헤드셋","brand":"HyperX","category":"헤드셋","connection":"무선","price":153400,"features":["가벼운무게","가상7.1채널"],"battery_hours":56,"rating":4.5,"review_summary":"10만원 이하 가성비 제품 중에서는 최고입니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00025"}}
+{"product_id":"AD-00025","product_name":"QCY 플러스 스포츠 이어폰","brand":"QCY","category":"이어폰","connection":"완전무선","price":268000,"features":["전용앱","멀티포인트"],"battery_hours":49,"rating":3.1,"review_summary":"저음이 강조되고 운동용으로 딱입니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00026"}}
+{"product_id":"AD-00026","product_name":"Bose 에어 오버이어 헤드폰","brand":"Bose","category":"헤드폰","connection":"무선","price":224200,"features":["멀티포인트","고해상도오디오"],"battery_hours":19,"rating":3.7,"review_summary":"10만원 이하 가성비 제품 중에서는 최고입니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00027"}}
+{"product_id":"AD-00027","product_name":"Corsair 스탠다드 방송용 헤드셋","brand":"Corsair","category":"헤드셋","connection":"무선","price":373000,"features":["무선충전","마이크노이즈캔슬링","가상7.1채널"],"battery_hours":71,"rating":3.2,"review_summary":"통화 품질이 좋아서 회의할 때 자주 씁니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00028"}}
+{"product_id":"AD-00028","product_name":"Samsung 프로 인이어 이어폰","brand":"Samsung","category":"이어폰","connection":"완전무선","price":140300,"features":["방수","멀티포인트"],"battery_hours":26,"rating":4.2,"review_summary":"저음이 강조되고 운동용으로 딱입니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00029"}}
+{"product_id":"AD-00029","product_name":"Sennheiser 프로 오버이어 헤드폰","brand":"Sennheiser","category":"헤드폰","connection":"무선","price":171500,"features":["멀티포인트","노이즈 캔슬링","고해상도오디오"],"battery_hours":62,"rating":4.4,"review_summary":"통화 품질이 좋아서 회의할 때 자주 씁니다."}
+{"index":{"_index":"audio-devices-search","_id":"AD-00030"}}
+{"product_id":"AD-00030","product_name":"Corsair 스탠다드 오피스 헤드셋","brand":"Corsair","category":"헤드셋","connection":"무선","price":339100,"features":["무선충전","RGB라이팅"],"battery_hours":30,"rating":4.8,"review_summary":"음질은 무난하지만 착용감이 정말 편안합니다."}
