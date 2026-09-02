@@ -10,11 +10,13 @@
 
 ## 일별 자료
 
-현재 공개: [Day 1](day-01/README.md), **[Day 2](day-02/README.md)**. Day3~5는 아래 예정에 따라 순차 공개한다.
+현재 공개: [Day 1](day-01/README.md), [Day 2](day-02/README.md), **[Day 3](day-03/README.md)**. Day4~5는 아래 예정에 따라 순차 공개한다.
 
-Day1에 clone한 배포 저장소에서 `git pull --ff-only origin main`을 실행하면 Day2가 추가된다. 개인 PBL 저장소와 구분한다.
+Day1에 clone한 배포 저장소에서 `git pull --ff-only origin main`을 실행하면 Day3 자료까지 추가된다. 개인 PBL 저장소와 구분한다.
 
 Day 2 실습을 마친 뒤 [Day 2 데이터 준비 결과 양식](evidence/day-02-data.md)을 개인 PBL 저장소의 같은 경로에 복사해 실제 결과를 작성하고 commit·push한다.
+
+Day 3에는 [교시별 실습 문제](day-03/practice/README.md) 8개 파일에서 공통 3문제와 개인 PBL 2문제씩 총 40문제를 수행한다. 개인 PBL 저장소의 루트 `requests.http`에 `V1-T17-P`~`V1-T21-P` 요청을 추가하고, 검색 품질 상세 기록은 `docs/quality-test.md`, 일일 요약은 `evidence/day-03-search.md`에 완성한다.
 
 | 폴더 | 공개 시점 | 내용 |
 |---|---|---|
