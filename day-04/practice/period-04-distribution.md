@@ -4,6 +4,7 @@
 - 선택 도전: 3분
 - 제출 상태 확인: 5분
 - 시작 기준: 공통 Dashboard 3패널 저장 완료
+- 화면 순서: [가격 구간](../KIBANA_9_5_STEP_BY_STEP.md#8-패널-4--가격-구간별-상품-수-bar), [Pie→Donut](../KIBANA_9_5_STEP_BY_STEP.md#9-패널-5--재고-상태-비율-donut), [Line](../KIBANA_9_5_STEP_BY_STEP.md#10-패널-6--월별-상품-등록-분포-line)
 
 ## (공통·필수) 문제 1 — 50,000원 단위 가격 분포
 
@@ -28,7 +29,7 @@
 
 ## (공통·필수) 문제 2 — 재고 상태 Donut과 기준값 검증
 
-`in_stock` Top values와 Count of records로 Donut을 만드세요.
+차트 유형 `Pie`에서 `in_stock` Top values와 Count of records를 설정한 뒤, `Style → Appearance → Donut hole → Medium`으로 Donut을 만드세요. 차트 목록에서 Donut을 찾지 않습니다.
 
 ### 결과 입력
 
@@ -43,7 +44,7 @@
 
 ## (공통·필수) 문제 3 — 월별 상품 등록 Line과 잘못된 해석 수정
 
-`created_at` Date histogram과 Count of records를 사용해 Month 단위 Line을 만드세요.
+`created_at` Date histogram과 Count of records를 사용하고 `Minimum interval`에 `1M`을 입력해 월 단위 Line을 만드세요.
 
 다음 문장을 데이터에 맞게 수정하세요.
 

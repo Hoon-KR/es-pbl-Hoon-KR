@@ -5,6 +5,8 @@ Day 4는 `products` 20,000건을 확인한 뒤, Kibana Lens와 Dashboard에서 �
 ## 파일 구성
 
 - `student-workbook.md`: 개념, 화면 역할, 차트 선택 기준, 단계별 실습
+- `KIBANA_9_5_STEP_BY_STEP.md`: Data View부터 각 패널·Control·검증·내보내기까지 실제 클릭 순서
+- `CHART_GALLERY.md`: 필수·선택 그래프의 완성 모습과 빠른 설정표
 - `PRACTICE_GUIDE.md`: 교시별 요구사항, 실행 방식, 검증 기준, 완료 조건
 - `practice/`: 교시별 필수 4문제+선택 1문제, 총 40문제와 답안 작성 방법
 - `assets/`: 교재와 같은 Kibana 9.5.0 실제 화면 캡처 20종
@@ -21,10 +23,12 @@ Day 4는 `products` 20,000건을 확인한 뒤, Kibana Lens와 Dashboard에서 �
 
 ## 연습문제 시작
 
-1. [답안 작성 방법](practice/ANSWER_WRITING_GUIDE.md)을 먼저 읽습니다.
-2. [교시별 문제 목록](practice/README.md)에서 현재 교시 문제지를 엽니다.
-3. 문제지를 개인 저장소 `evidence/day-04-practice/`에 복사해 답을 작성합니다.
-4. 매 교시는 필수 4문제를 먼저 수행하고 선택 도전은 시간이 남을 때만 수행합니다.
+1. [Kibana 9.5.0 화면 그대로 따라 하기](KIBANA_9_5_STEP_BY_STEP.md)를 북마크합니다.
+2. [차트 완성형 한눈에 보기](CHART_GALLERY.md)에서 오늘 만들 결과를 확인합니다.
+3. [답안 작성 방법](practice/ANSWER_WRITING_GUIDE.md)을 읽습니다.
+4. [교시별 문제 목록](practice/README.md)에서 현재 교시 문제지를 엽니다.
+5. 문제지를 개인 저장소 `evidence/day-04-practice/`에 복사해 답을 작성합니다.
+6. 매 교시는 필수 4문제를 먼저 수행하고 선택 도전은 시간이 남을 때만 수행합니다.
 
 전체 40문제에는 공통 기능 재현, 설정 변형, 오류 진단·검증, 개인 PBL 적용, 선택 도전이 교시 목적에 맞게 포함됩니다. 예상값을 그대로 적지 말고 실제 화면에서 확인한 값과 근거 캡처를 기록합니다.
 

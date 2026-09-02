@@ -4,6 +4,8 @@
 
 교시별 실제 문제와 답안란은 [`practice/README.md`](practice/README.md)에서 시작합니다. 답을 쓰기 전 [`practice/ANSWER_WRITING_GUIDE.md`](practice/ANSWER_WRITING_GUIDE.md)의 질문·설정·실제 결과·근거·판정 작성 규칙을 확인합니다.
 
+메뉴 위치와 클릭 순서는 [`KIBANA_9_5_STEP_BY_STEP.md`](KIBANA_9_5_STEP_BY_STEP.md), 모든 필수·선택 그래프의 완성 모습은 [`CHART_GALLERY.md`](CHART_GALLERY.md)를 사용합니다. 메뉴가 다르면 임의로 눌러 진행하지 말고 단계 번호와 화면 캡처를 제출합니다.
+
 ## 공통 준비
 
 1. Kibana 접속과 `products` Data View를 확인합니다.
@@ -14,6 +16,8 @@
 
 ## 1교시 · 데이터와 질문 확인
 
+- 상세 클릭 순서: [Data View](KIBANA_9_5_STEP_BY_STEP.md#1-data-view-만들기-또는-기존-data-view-확인하기), [Discover](KIBANA_9_5_STEP_BY_STEP.md#2-discover에서-실제-데이터-확인하기)
+
 - 요구사항: Data View, Discover, Lens, Dashboard 역할을 구분하고 공통 기준값을 확인한다.
 - 강사 시연: products Data View와 Discover에서 20,000건, 핵심 field, 시간 범위를 확인한다.
 - 학생 재현: 표시 열 7개를 추가하고 `in_stock:false`가 3,001건인지 확인한다.
@@ -22,6 +26,8 @@
 - 최종 골: GREEN/YELLOW/RED 상태와 개인 질문 1개.
 
 ## 2교시 · 전체와 그룹 비교
+
+- 상세 클릭 순서: [Metric](KIBANA_9_5_STEP_BY_STEP.md#5-패널-1--전체-상품-수-metric), [category Bar](KIBANA_9_5_STEP_BY_STEP.md#6-패널-2--카테고리별-상품-수-bar)
 
 - 요구사항: 전체 상품 수 Metric과 category Bar를 만든다.
 - 강사 시연: Records count Metric → category Top values + Count Bar.
@@ -32,6 +38,8 @@
 
 ## 3교시 · 정확한 값과 정렬
 
+- 상세 클릭 순서: [brand Table](KIBANA_9_5_STEP_BY_STEP.md#7-패널-3--브랜드별-상품-수와-평균-가격-table)
+
 - 요구사항: brand별 Count와 Average price를 한 Table에서 비교한다.
 - 강사 시연: brand Top values, Records count, Average price, 정렬 변경.
 - 학생 재현: 같은 Table을 만든다.
@@ -41,14 +49,18 @@
 
 ## 4교시 · 분포·비율·시간
 
+- 상세 클릭 순서: [price ranges](KIBANA_9_5_STEP_BY_STEP.md#8-패널-4--가격-구간별-상품-수-bar), [Pie→Donut](KIBANA_9_5_STEP_BY_STEP.md#9-패널-5--재고-상태-비율-donut), [created_at Line](KIBANA_9_5_STEP_BY_STEP.md#10-패널-6--월별-상품-등록-분포-line)
+
 - 요구사항: price Bar, in_stock Donut, created_at Line을 만든다.
-- 강사 시연: Intervals, Top values, Date histogram의 차이를 보여 준다.
+- 강사 시연: Intervals, Top values, Date histogram의 차이와 `Pie → Donut hole`, `Minimum interval → 1M`을 보여 준다.
 - 학생 재현: 세 패널을 만든다.
-- +@ 과제: price 자동 Intervals/50,000 단위 custom ranges 또는 날짜 Day/Month를 비교해 하나를 선택한다.
+- +@ 과제: price 자동 Intervals/50,000 단위 custom ranges 또는 날짜 `1d`/`1M`을 비교해 하나를 선택한다.
 - 검증: false 3,001·true 16,999, 날짜 의미가 상품 등록 시점임을 확인한다.
 - 최종 골: 공통 필수 6패널 완성.
 
 ## 5교시 · 조립·저장·상호작용
+
+- 상세 클릭 순서: [배치·패널 메뉴](KIBANA_9_5_STEP_BY_STEP.md#11-dashboard-배치제목패널-메뉴), [Options list](KIBANA_9_5_STEP_BY_STEP.md#12-category-options-list-control), [조건 복구](KIBANA_9_5_STEP_BY_STEP.md#13-controlfilterkql-사용과-복구), [저장](KIBANA_9_5_STEP_BY_STEP.md#14-dashboard-저장재열기복제)
 
 - 요구사항: 6패널을 배치하고 category Options list와 패널 클릭 filter를 확인한다.
 - 강사 시연: 제목 변경, 패널 크기 조정, control 추가, filter 적용·해제, 저장.
@@ -69,6 +81,8 @@
 
 ## 7교시 · 개인 Dashboard 제작
 
+- 상세 클릭 순서: [개인본 Save as](KIBANA_9_5_STEP_BY_STEP.md#142-개인본-만들기), [선택 확장 패널](KIBANA_9_5_STEP_BY_STEP.md#16-선택-확장-패널)
+
 - 요구사항: 개인 질문을 답하는 패널 4개 이상과 filter/control 1개를 만든다.
 - 강사 시연: 공통 설정을 다른 질문으로 바꾸는 방법을 보여 준다.
 - 학생 재현: 청사진 순서대로 만들고 각 패널 제목을 질문형으로 붙인다.
@@ -77,6 +91,8 @@
 - 최종 골: 개인 Dashboard 저장.
 
 ## 8교시 · 테스트·해석·개선
+
+- 상세 클릭 순서: [결과 저장·백업](KIBANA_9_5_STEP_BY_STEP.md#15-결과-저장공유백업), [최종 점검](KIBANA_9_5_STEP_BY_STEP.md#18-최종-자가-점검)
 
 - 요구사항: filter 전후, 핵심값 3개, 오류 복구, 해석 2문장, 개선 1개를 남긴다.
 - 강사 시연: 조건 적용→값 기록→Discover/ES 대조→Clear→개선.

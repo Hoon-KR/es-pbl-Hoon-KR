@@ -4,6 +4,7 @@
 - 선택 도전: 7분
 - 제출 상태 확인: 5분
 - 시작 기준: Kibana 접속 가능
+- 화면 순서: [Data View·Discover 상세 가이드](../KIBANA_9_5_STEP_BY_STEP.md#1-data-view-만들기-또는-기존-data-view-확인하기)
 
 ## (공통·필수) 문제 1 — Dashboard를 만들 수 있는 데이터인지 확인
 

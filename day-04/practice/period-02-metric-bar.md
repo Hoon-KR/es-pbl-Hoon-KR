@@ -4,6 +4,7 @@
 - 선택 도전: 5분
 - 제출 상태 확인: 5분
 - 시작 기준: Discover 20,000건, KQL/filter 없음
+- 화면 순서: [Metric](../KIBANA_9_5_STEP_BY_STEP.md#5-패널-1--전체-상품-수-metric), [category Bar](../KIBANA_9_5_STEP_BY_STEP.md#6-패널-2--카테고리별-상품-수-bar)
 
 ## (공통·필수) 문제 1 — 전체 상품 수 Metric 제작
 
@@ -47,6 +48,8 @@
 ## (변형·필수) 문제 3 — Bar 방향 한 가지만 바꿔 비교
 
 동일한 category·Count·Top 8을 유지하고 Bar 방향만 vertical과 horizontal로 바꿔 보세요.
+
+방향은 `Style → Appearance → Bar orientation`에서 바꿉니다. 축 label 방향과 혼동하지 않습니다.
 
 | 비교 | vertical | horizontal |
 |---|---|---|

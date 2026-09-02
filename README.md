@@ -18,7 +18,7 @@ Day 2 실습을 마친 뒤 [Day 2 데이터 준비 결과 양식](evidence/day-0
 
 Day 3에는 [교시별 실습 문제](day-03/practice/README.md) 8개 파일에서 공통 3문제와 개인 PBL 2문제씩 총 40문제를 수행한다. 개인 PBL 저장소의 루트 `requests.http`에 `V1-T17-P`~`V1-T21-P` 요청을 추가하고, 검색 품질 상세 기록은 `docs/quality-test.md`, 일일 요약은 `evidence/day-03-search.md`에 완성한다.
 
-Day 4에는 [Dashboard 학생교재](day-04/student-workbook.md)와 [교시별 연습문제](day-04/practice/README.md)를 사용한다. 교시별 필수 4문제와 선택 도전 1문제씩 총 40문제를 수행하며, 답은 개인 저장소의 `evidence/day-04-practice/`에 작성한다. 최종 Dashboard 설계·검증은 `evidence/day-04/` 양식을 사용한다.
+Day 4에는 [Kibana 9.5.0 화면 그대로 따라 하기](day-04/KIBANA_9_5_STEP_BY_STEP.md), [차트 완성형 한눈에 보기](day-04/CHART_GALLERY.md), [Dashboard 학생교재](day-04/student-workbook.md), [교시별 연습문제](day-04/practice/README.md)를 사용한다. 교시별 필수 4문제와 선택 도전 1문제씩 총 40문제를 수행하며, 답은 개인 저장소의 `evidence/day-04-practice/`에 작성한다. 최종 Dashboard 설계·검증은 `evidence/day-04/` 양식을 사용한다.
 
 | 폴더 | 공개 시점 | 내용 |
 |---|---|---|

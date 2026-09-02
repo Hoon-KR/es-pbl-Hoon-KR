@@ -4,6 +4,7 @@
 - 선택 도전: 3분
 - 제출 상태 확인: 5분
 - 시작 기준: 공통 필수 6패널 완성
+- 화면 순서: [패널 제목·배치](../KIBANA_9_5_STEP_BY_STEP.md#11-dashboard-배치제목패널-메뉴), [Control](../KIBANA_9_5_STEP_BY_STEP.md#12-category-options-list-control), [Filter 복구](../KIBANA_9_5_STEP_BY_STEP.md#13-controlfilterkql-사용과-복구)
 
 ## (공통·필수) 문제 1 — 6패널을 읽는 순서로 배치
 
@@ -29,6 +30,8 @@
 ## (공통·필수) 문제 2 — category Options list 추가
 
 Dashboard 편집 모드에서 category Control을 추가하세요.
+
+진입 순서: `Add`(안 보이면 `More → Add`) → `New → Controls → Control → Select a field`
 
 - Data View: 공통 `products`
 - field: `category`
@@ -63,7 +66,7 @@ category 하나를 선택한 뒤 두 패널 이상의 값이 바뀌는지 확인
 
 - 세 방식의 사용자가 느끼는 차이:
 - 모든 조건 제거 후 전체값:
-- `Filter for value` 문구가 없을 때 확인한 화면 요소:
+- `Filter for value` 문구가 없을 때 확인한 filter pill과 변한 패널:
 - 캡처 파일:
 
 ## (공통·필수) 문제 4 — 목요일 종료용 저장·재열기

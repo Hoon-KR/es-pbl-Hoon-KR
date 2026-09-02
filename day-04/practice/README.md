@@ -2,6 +2,8 @@
 
 Day 4 연습문제는 Kibana 화면을 그대로 따라 한 뒤 끝내는 방식이 아닙니다. 공통 `products`로 기능을 확인하고, 설정 하나를 바꾸고, 결과를 검증한 다음, 같은 판단 절차를 자신의 PBL 주제에 적용합니다.
 
+버튼 위치나 입력값이 기억나지 않으면 상위 폴더의 [`KIBANA_9_5_STEP_BY_STEP.md`](../KIBANA_9_5_STEP_BY_STEP.md)를 엽니다. 그래프 완성 모습만 빠르게 비교하려면 [`CHART_GALLERY.md`](../CHART_GALLERY.md)를 사용합니다.
+
 ## 문제 구성
 
 각 교시는 다음 역할을 조합한 5문제로 구성됩니다. 교시에서 새로 배워야 하는 차트가 여러 개이면 공통 재현 문제가 둘 이상 포함될 수 있습니다.
@@ -28,6 +30,15 @@ Day 4 연습문제는 Kibana 화면을 그대로 따라 한 뒤 끝내는 방식
 | 8 | 사용 시나리오·교차 검증·개선·제출 | 4 | 1 | [period-08-validation.md](period-08-validation.md) |
 
 답을 쓰는 방식은 [ANSWER_WRITING_GUIDE.md](ANSWER_WRITING_GUIDE.md)를 먼저 읽습니다.
+
+## Kibana 9.5.0 공통 주의
+
+- Donut은 차트 선택기의 별도 유형이 아닙니다. `Pie → Style → Appearance → Donut hole`로 만듭니다.
+- 월 단위 Line은 Date histogram의 `Minimum interval`에 `1M`을 입력합니다.
+- 정확한 가격 구간은 `Create custom ranges`로 만듭니다.
+- 패널 제목은 Dashboard 편집 모드에서 패널 `Settings`로 바꿉니다.
+- `Inspect`는 편집 모드의 해당 패널 `Panel menu`에 있습니다.
+- PDF가 없어도 정상입니다. 화면 캡처가 기본 제출 근거입니다.
 
 ## 개인 저장소로 복사
 

@@ -4,6 +4,7 @@
 - 선택 도전: 5분
 - 제출 상태 확인: 5분
 - 시작 기준: 공통 Dashboard의 Metric과 category Bar 저장 완료
+- 화면 순서: [Table 상세 가이드](../KIBANA_9_5_STEP_BY_STEP.md#7-패널-3--브랜드별-상품-수와-평균-가격-table)
 
 ## (공통·필수) 문제 1 — brand Table 제작
 
@@ -12,6 +13,8 @@
 1. `brand` Top values
 2. Count of records
 3. Average of `price`
+
+Average는 `Metrics → Quick function → Average → Field: price`로 추가합니다. 열 Name은 `브랜드`, `상품 수`, `평균 가격`으로 지정합니다.
 
 패널 제목은 `브랜드별 상품 수와 평균 가격`으로 저장합니다.
 

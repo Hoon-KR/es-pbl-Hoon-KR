@@ -4,6 +4,7 @@
 - 선택 도전: 필수 제출 완료 후
 - 함께 작성: `../evidence/day-04/dashboard-review.md`
 - 시작 기준: 개인 Dashboard 4패널 이상과 상호작용 1개 저장 완료
+- 화면 순서: [Inspect·결과 저장·백업](../KIBANA_9_5_STEP_BY_STEP.md#15-결과-저장공유백업)
 
 ## (개인·필수) 문제 1 — 사용자 행동 두 가지 테스트
 
@@ -20,7 +21,7 @@ Dashboard 사용자가 실제로 할 행동 두 가지를 실행하세요. 각 �
 
 ## (개인·필수) 문제 2 — 핵심값 3개 교차 검증
 
-Dashboard의 핵심값 3개를 Discover, `_count`, 또는 aggregation 요청과 비교하세요. Dashboard에 `Inspect` 메뉴가 없어도 됩니다.
+Dashboard의 핵심값 3개를 Discover, `_count`, 또는 aggregation 요청과 비교하세요. `Inspect`는 Dashboard 편집 모드에서 해당 패널의 `Panel menu`에 있습니다. 권한이나 화면 상태로 보이지 않으면 Discover 또는 제공 요청 파일로 검증합니다.
 
 | Dashboard 패널·값 | 동일하게 맞춘 시간·조건 | 비교 방법 | 비교값 | 일치 여부 | 다르면 확인한 원인 |
 |---|---|---|---:|---|---|
@@ -76,7 +77,7 @@ Dashboard의 핵심값 3개를 Discover, `_count`, 또는 aggregation 요청과 
 - 개인 저장소 commit SHA:
 - 미완료 또는 알려진 제한 사항:
 
-PDF 메뉴가 없으면 정상입니다. 화면 캡처를 기본 근거로 사용하고 JSON export는 현재 환경에서 제공될 때만 선택합니다.
+PDF 메뉴가 없으면 정상입니다. 현재 수업 환경의 `More → Export`는 Dashboard JSON을 제공하며, 관련 객체까지 옮길 때는 `Stack Management → Kibana → Saved Objects → Export`를 사용합니다. 화면 캡처를 기본 근거로 제출합니다.
 
 ## (선택 도전) 문제 5 — 다른 사람이 재현할 수 있는지 점검
 

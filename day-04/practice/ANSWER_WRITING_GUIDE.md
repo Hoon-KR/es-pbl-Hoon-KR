@@ -115,7 +115,7 @@ Top N과 정렬 기준을 동시에 바꾸면 무엇 때문에 결과가 달라�
 - 재발 방지:
 ```
 
-`Inspect`, PDF, 특정 팝업 문구가 보이지 않는 것만으로 실패로 판정하지 않습니다. 현재 환경에서 실제 제공되는 Discover, Dashboard filter pill, 화면 캡처, JSON 내보내기를 사용합니다.
+`Inspect`는 Dashboard 편집 모드에서 해당 패널의 `Panel menu`에 있습니다. 권한이나 화면 상태로 보이지 않더라도 실패로 판정하지 않고 Discover 또는 제공 요청으로 검증합니다. PDF와 특정 팝업 문구가 보이지 않는 것도 실패가 아닙니다. 현재 환경에서 실제 제공되는 Dashboard filter pill, 화면 캡처, JSON 내보내기를 사용합니다.
 
 ## 7. 개인 PBL 문제 작성 방법
 

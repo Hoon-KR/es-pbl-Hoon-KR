@@ -4,6 +4,10 @@
 - 환경: Elasticsearch 9.5.0, Kibana 9.5.0, Windows 11
 - 공통 index: `products` / 예상 문서 수: 20,000
 - 실행 정본: [`PRACTICE_GUIDE.md`](PRACTICE_GUIDE.md)
+- 화면별 상세 클릭 순서: [`KIBANA_9_5_STEP_BY_STEP.md`](KIBANA_9_5_STEP_BY_STEP.md)
+- 모든 차트 완성형: [`CHART_GALLERY.md`](CHART_GALLERY.md)
+
+> 이 교재는 수업 흐름과 판단 기준을 설명합니다. 메뉴 위치와 입력값이 기억나지 않으면 상세 클릭 순서 문서를 열어 해당 번호부터 그대로 따라 합니다.
 
 ## §1 오늘의 목표
 
@@ -57,12 +61,14 @@ Data View는 데이터를 복사하지 않습니다. 같은 `products`를 바라
 
 ### §3.1 준비 상태
 
-1. Kibana에서 Data View 관리 화면을 연다.
-2. `products`와 연결된 Data View를 선택한다.
+1. `Stack Management → Kibana → Data Views`를 연다.
+2. 강사가 지정한 Data View의 index pattern이 정확히 `products`인지 확인한다.
 3. 시간 field가 `created_at`인지 확인한다.
-4. Discover로 이동한다.
-5. 시간 범위를 공통 기준 범위로 맞춘다.
+4. Discover로 이동해 같은 Data View를 선택한다.
+5. 시간 범위를 강사가 지정한 절대 범위로 맞춘다.
 6. 20,000건과 `product_id`, `name`, `category`, `brand`, `price`, `in_stock`, `created_at`을 확인한다.
+
+처음 만드는 경우의 `Name`, `Index pattern`, `Timestamp field` 입력부터 열 추가 방법까지는 [Data View와 Discover 상세 순서](KIBANA_9_5_STEP_BY_STEP.md#1-data-view-만들기-또는-기존-data-view-확인하기)를 따릅니다. 교재 화면과 Data View 표시 이름이 달라도 index pattern이 `products`이면 사용할 수 있습니다.
 
 ### §3.2 KQL 확인
 
@@ -89,11 +95,12 @@ in_stock : false
 ![Lens Metric 설정 화면](assets/D4V2-CAP-05_lens-metric.png)
 
 1. Dashboard에서 `Create dashboard`를 선택한다.
-2. `Add` → `Visualization`으로 Lens를 연다.
+2. 빈 화면의 `Create visualization`을 누른다. 첫 패널 이후에는 `Add → New → Visualization`을 사용한다. 창이 좁으면 `More → Add`에 있다.
 3. Data View를 확인한다.
 4. 시각화 유형을 `Metric`으로 선택한다.
-5. 값은 Records count를 사용한다.
-6. 제목을 `전체 상품 수`로 저장하고 Dashboard로 돌아간다.
+5. `Records`를 workspace에 추가해 `Count of records`를 사용한다.
+6. `Save and return`으로 Dashboard로 돌아간다.
+7. 패널 위 `Settings → Show title → Enter a custom title for your panel → Apply`에서 제목을 `전체 상품 수`로 지정한다.
 
 검증값: `20,000`
 
@@ -104,6 +111,8 @@ in_stock : false
 3. 가로축에 `category`의 Top values를 사용한다.
 4. 세로축에 Records count를 사용한다.
 5. 제목을 `카테고리별 상품 수`로 저장한다.
+
+막대 방향은 축 label 메뉴가 아니라 `Style → Appearance → Bar orientation`에서 바꿉니다. 상세 클릭 순서는 [Metric과 Bar](KIBANA_9_5_STEP_BY_STEP.md#5-패널-1--전체-상품-수-metric)를 확인합니다.
 
 검증값: 8개 category가 각각 2,500건
 
@@ -128,6 +137,8 @@ Bar는 크기 차이를 빠르게 비교하기 좋고, Table은 정확한 숫자
 5. count 기준 내림차순과 average price 기준 내림차순을 비교한다.
 6. 제목을 `브랜드별 상품 수와 평균 가격`으로 저장한다.
 
+Average는 `Metrics → Quick function → Average → Field: price`로 추가합니다. 열 이름은 `브랜드`, `상품 수`, `평균 가격`으로 지정합니다. [Table 상세 순서](KIBANA_9_5_STEP_BY_STEP.md#7-패널-3--브랜드별-상품-수와-평균-가격-table)
+
 ### §5.3 +@ 질문
 
 “상품이 많은 브랜드”와 “평균 가격이 높은 브랜드”는 같은 질문이 아닙니다. 정렬 기준이 바뀌면 어떤 판단이 달라지는지 한 문장으로 씁니다.
@@ -148,17 +159,21 @@ Bar는 크기 차이를 빠르게 비교하기 좋고, Table은 정확한 숫자
 
 ### §6.2 in_stock Donut
 
+- 차트 유형: 먼저 `Pie` 선택
 - 분할 field: `in_stock` Top values
 - Metric: Records count
+- Donut 전환: `Style → Appearance → Donut hole → Medium`
 - 제목: `재고 상태 비율`
 
 검증값: `true` 16,999건, `false` 3,001건
+
+Kibana 9.5.0 선택기에는 `Donut`이라는 별도 차트 유형이 없습니다. [Pie를 Donut으로 바꾸는 상세 순서](KIBANA_9_5_STEP_BY_STEP.md#9-패널-5--재고-상태-비율-donut)를 사용합니다.
 
 ### §6.3 created_at Line
 
 - 가로축: `created_at` Date histogram
 - 세로축: Records count
-- 시작 단위: Month
+- 시작 단위: `Minimum interval`에 `1M` 입력
 - 제목: `월별 상품 등록 분포`
 
 `created_at`은 주문일이나 판매일이 아니라 상품 등록 시점입니다. 이 차트는 판매 추세로 설명하면 안 됩니다.
@@ -172,7 +187,8 @@ Bar는 크기 차이를 빠르게 비교하기 좋고, Table은 정확한 숫자
 3. 세부 숫자 Table을 충분히 넓게 둔다.
 4. 긴 축 라벨이나 숫자가 겹치지 않게 패널을 늘린다.
 5. 제목을 `D4 공통 상품 Dashboard - 이름`으로 저장한다.
-6. 현재 시간 범위를 함께 저장한다.
+6. 절대 시간 범위를 고정하려면 `More → Settings → Store time with dashboard → Apply`를 사용한다.
+7. 저장 후 목록에서 다시 열어 시간 범위를 확인한다. Save as 창에서 시간 저장 checkbox를 찾지 않는다.
 
 목요일 종료 시점이라면 여기서 Dashboard가 저장되고 6개 패널이 보이는지 확인합니다. 금요일에는 같은 파일의 다음 절부터 이어갑니다.
 
@@ -180,7 +196,7 @@ Bar는 크기 차이를 빠르게 비교하기 좋고, Table은 정확한 숫자
 
 ![category Control 설정 화면](assets/D4V2-CAP-14_control-edit.png)
 
-편집 모드에서 `Controls` → `Add control` 또는 `Add` → `Controls` → `Control`을 사용합니다.
+편집 모드에서 `Add`를 누릅니다. 창이 좁으면 `More → Add`를 사용합니다. `Add to dashboard → New → Controls → Control → Select a field` 순서로 엽니다.
 
 - Data View: 공통 products Data View
 - field: `category`
@@ -192,6 +208,8 @@ Bar는 크기 차이를 빠르게 비교하기 좋고, Table은 정확한 숫자
 ### §7.3 패널 클릭 filter
 
 Bar의 막대나 Donut 조각을 클릭하면 Dashboard filter가 적용될 수 있습니다. 상단 filter pill을 확인하고, 의도하지 않은 filter라면 제거하거나 비활성화합니다.
+
+`Filter for value`라는 문구가 반드시 나타나는 것은 아닙니다. 결과가 한 항목만 남으면 시간 → Data View → KQL → filter pill → Control → Lens 설정 순서로 확인합니다. [상호작용과 복구 상세 순서](KIBANA_9_5_STEP_BY_STEP.md#13-controlfilterkql-사용과-복구)
 
 ## §8 6교시 — 개인 Dashboard 청사진
 
@@ -233,6 +251,8 @@ Bar의 막대나 Donut 조각을 클릭하면 Dashboard filter가 적용될 수 
 
 “만들 수 있다”가 아니라 “내 질문에 이 차트가 필요한가?”를 기준으로 고릅니다.
 
+각 유형의 정확한 설정 위치와 추천 field는 [선택 확장 패널 상세 순서](KIBANA_9_5_STEP_BY_STEP.md#16-선택-확장-패널), 완성형 비교는 [차트 완성형 모음](CHART_GALLERY.md)을 확인합니다.
+
 ## §10 8교시 — 테스트·해석·증거 저장
 
 ### §10.1 테스트
@@ -265,9 +285,32 @@ Bar의 막대나 Donut 조각을 클릭하면 Dashboard filter가 적용될 수 
 - [ ] 개선 전·후와 해석을 `dashboard-review.md`에 작성했다.
 - [ ] 전체 Dashboard 캡처와 evidence를 개인 저장소에 저장했다.
 
+### §10.4 내보내기 주의
+
+- Dashboard의 `More → Export`에는 현재 수업 환경에서 `Export dashboard as JSON`이 제공됩니다.
+- 관련 Data View와 Visualization까지 이동하려면 `Stack Management → Kibana → Saved Objects → Export`를 사용합니다.
+- 현재 수업용 Kibana 9.5.0에는 PDF 내보내기 메뉴가 보이지 않습니다. PDF는 제출 조건이 아니며 화면 캡처가 기본 근거입니다.
+- 패널의 `Inspect`는 Dashboard 편집 모드에서 패널 위 `Panel menu`에 있습니다.
+
+## Kibana 9.5.0에서 특히 주의할 교정 사항
+
+| 잘못 찾기 쉬운 내용 | 정확한 방법 |
+|---|---|
+| 차트 목록에서 Donut 찾기 | `Pie` 선택 후 `Style → Appearance → Donut hole` |
+| Line에서 Month 버튼 찾기 | Date histogram의 `Minimum interval`에 `1M` 입력 |
+| `Decrease granularity`로 막대 수 정확히 맞추기 | 정확한 구간은 `Create custom ranges` 사용 |
+| 제목을 저장 창에서만 찾기 | `Save and return` 후 패널 `Settings`에서 custom title 입력 |
+| Dashboard 위쪽 More에서 Inspect 찾기 | 편집 모드에서 해당 패널의 `Panel menu → Inspect` |
+| PDF 내보내기 찾기 | 이 환경에는 없음. 캡처 기본, JSON/NDJSON 선택 |
+| `Filter for value` 팝업을 반드시 찾기 | filter pill이 실제로 추가됐는지 확인 |
+
 ## 공식 문서
 
 - [Lens visualizations](https://www.elastic.co/docs/explore-analyze/visualize/lens)
 - [Create a dashboard](https://www.elastic.co/docs/explore-analyze/dashboards/create-dashboard)
 - [Dashboard controls](https://www.elastic.co/docs/explore-analyze/visualize/add-controls)
 - [Explore and filter dashboards](https://www.elastic.co/docs/explore-analyze/dashboards/using)
+- [Data Views](https://www.elastic.co/guide/en/kibana/current/data-views.html)
+- [Discover 시작하기](https://www.elastic.co/docs/explore-analyze/discover/discover-get-started)
+- [Pie와 Donut 설정](https://www.elastic.co/docs/explore-analyze/visualize/charts/pie-charts)
+- [Saved Objects 내보내기](https://www.elastic.co/docs/extend/kibana/key-concepts/saved-objects/export)
