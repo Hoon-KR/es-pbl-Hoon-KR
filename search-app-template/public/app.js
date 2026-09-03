@@ -130,4 +130,3 @@ elements.form.addEventListener("submit", (event) => {
 });
 
 initialize();
-

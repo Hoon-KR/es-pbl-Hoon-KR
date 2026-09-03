@@ -146,4 +146,3 @@ const server = http.createServer(async (request, response) => {
 server.listen(port, "0.0.0.0", () => {
   console.log(`Search app is ready: http://localhost:${port}`);
 });
-

@@ -7,4 +7,3 @@ COPY config ./config
 
 EXPOSE 3000
 CMD ["node", "server.mjs"]
-

@@ -74,4 +74,3 @@ footer { padding: 24px; color: var(--muted); text-align: center; font-size: .78r
   .result-grid { grid-template-columns: 1fr; }
   .results-header { align-items: start; flex-direction: column; }
 }
-
