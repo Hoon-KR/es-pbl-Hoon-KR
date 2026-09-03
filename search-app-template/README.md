@@ -45,6 +45,7 @@ docker compose logs --tail 100 search-app
 ```
 
 - FE는 결과 목록, 건수, highlight, 0건과 오류 상태를 표시합니다.
+- 검색 후 `검색 쿼리 보기`를 누르면 BE가 실제로 실행한 Search API와 검색어가 반영된 JSON body를 확인하고 다시 닫을 수 있습니다.
 - BE는 비밀번호를 브라우저에 노출하지 않고 ES에 Search API를 전송합니다.
 - BE는 `search-request.json`을 검색할 때마다 다시 읽으므로 JSON 저장 후 앱을 재시작할 필요가 없습니다.
 - 이 템플릿은 로컬 교육 환경용입니다. 인터넷에 그대로 공개 배포하지 않습니다.

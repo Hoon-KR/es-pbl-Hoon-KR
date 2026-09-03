@@ -131,7 +131,14 @@ const server = http.createServer(async (request, response) => {
       const body = applySearchText(requestTemplate, searchText);
       body.size = config.pageSize;
       const result = await requestElasticsearch(config.index, body);
-      return sendJson(response, 200, result);
+      return sendJson(response, 200, {
+        ...result,
+        pblRequest: {
+          method: "POST",
+          path: `/${config.index}/_search`,
+          body
+        }
+      });
     }
     if (request.method === "GET") return serveStatic(requestUrl.pathname, response);
     sendJson(response, 405, { message: "지원하지 않는 요청입니다." });

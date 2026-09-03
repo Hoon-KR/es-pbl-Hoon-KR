@@ -36,6 +36,18 @@
           </div>
           <span id="took"></span>
         </div>
+        <div id="query-tools" class="query-tools" hidden>
+          <button id="query-toggle" class="query-toggle" type="button" aria-expanded="false" aria-controls="query-panel">
+            검색 쿼리 보기
+          </button>
+        </div>
+        <section id="query-panel" class="query-panel" aria-label="실행된 Elasticsearch 검색 쿼리" hidden>
+          <div class="query-panel-header">
+            <span>실행된 Search API</span>
+            <code id="query-path"></code>
+          </div>
+          <pre><code id="query-code"></code></pre>
+        </section>
         <div id="message" class="message initial">
           <strong>검색 기능 준비 완료</strong>
           <span>위 검색창에서 자신의 데이터가 의도대로 노출되는지 확인하세요.</span>

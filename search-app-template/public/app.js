@@ -9,10 +9,33 @@ const elements = {
   message: document.querySelector("#message"),
   list: document.querySelector("#result-list"),
   section: document.querySelector(".results-section"),
-  connection: document.querySelector("#connection-state")
+  connection: document.querySelector("#connection-state"),
+  queryTools: document.querySelector("#query-tools"),
+  queryToggle: document.querySelector("#query-toggle"),
+  queryPanel: document.querySelector("#query-panel"),
+  queryPath: document.querySelector("#query-path"),
+  queryCode: document.querySelector("#query-code")
 };
 
 let config;
+
+function closeQueryPanel() {
+  elements.queryPanel.hidden = true;
+  elements.queryToggle.setAttribute("aria-expanded", "false");
+  elements.queryToggle.textContent = "검색 쿼리 보기";
+}
+
+function setExecutedQuery(request) {
+  if (!request?.body) {
+    elements.queryTools.hidden = true;
+    closeQueryPanel();
+    return;
+  }
+  elements.queryPath.textContent = `${request.method || "POST"} ${request.path || ""}`;
+  elements.queryCode.textContent = JSON.stringify(request.body, null, 2);
+  elements.queryTools.hidden = false;
+  closeQueryPanel();
+}
 
 function getValue(source, fieldPath) {
   return String(fieldPath || "").split(".").reduce((value, key) => value?.[key], source);
@@ -78,6 +101,8 @@ async function search(searchText) {
   elements.section.setAttribute("aria-busy", "true");
   elements.summary.textContent = `“${searchText}” 검색 중`;
   elements.took.textContent = "";
+  elements.queryTools.hidden = true;
+  closeQueryPanel();
   showMessage("검색 중", "ES에서 결과를 가져오고 있습니다.");
   try {
     const response = await fetch(`/api/search?q=${encodeURIComponent(searchText)}`);
@@ -87,6 +112,7 @@ async function search(searchText) {
     const total = typeof data.hits?.total === "number" ? data.hits.total : (data.hits?.total?.value || 0);
     elements.summary.textContent = `“${searchText}” 검색 결과 ${new Intl.NumberFormat("ko-KR").format(total)}건`;
     elements.took.textContent = `${data.took ?? 0}ms`;
+    setExecutedQuery(data.pblRequest);
     if (!hits.length) showMessage("검색 결과가 없습니다", "검색어와 query field, 실제 저장값을 확인하세요.");
     else { elements.message.hidden = true; renderHits(hits); }
   } catch (error) {
@@ -127,6 +153,13 @@ elements.form.addEventListener("submit", (event) => {
   event.preventDefault();
   const searchText = elements.input.value.trim();
   if (searchText) search(searchText);
+});
+
+elements.queryToggle.addEventListener("click", () => {
+  const willOpen = elements.queryPanel.hidden;
+  elements.queryPanel.hidden = !willOpen;
+  elements.queryToggle.setAttribute("aria-expanded", String(willOpen));
+  elements.queryToggle.textContent = willOpen ? "검색 쿼리 닫기" : "검색 쿼리 보기";
 });
 
 initialize();
