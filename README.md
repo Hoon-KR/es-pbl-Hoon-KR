@@ -20,6 +20,8 @@ Day 3에는 [교시별 실습 문제](day-03/practice/README.md) 8개 파일에�
 
 Day 4에는 [Kibana 9.5.0 화면 그대로 따라 하기](day-04/KIBANA_9_5_STEP_BY_STEP.md), [차트 완성형 한눈에 보기](day-04/CHART_GALLERY.md), [Dashboard 학생교재](day-04/student-workbook.md), [교시별 연습문제](day-04/practice/README.md)를 사용한다. 교시별 필수 4문제와 선택 도전 1문제씩 총 40문제를 수행하며, 답은 개인 저장소의 `evidence/day-04-practice/`에 작성한다. 최종 Dashboard 설계·검증은 `evidence/day-04/` 양식을 사용한다.
 
+자신의 인덱스와 Search API를 브라우저에서 시연할 때는 [FE·BE 검색 앱 템플릿](search-app-template/README.md)을 사용한다. `search-app-template/`을 개인 PBL 저장소로 복사하고 설정 JSON 2개를 수정한 뒤 `start.ps1`을 실행한다.
+
 | 폴더 | 공개 시점 | 내용 |
 |---|---|---|
 | `day-01/` | 1일 차 전날 | 과정·PBL 시작, Docker, 첫 REST 요청 |
@@ -27,6 +29,7 @@ Day 4에는 [Kibana 9.5.0 화면 그대로 따라 하기](day-04/KIBANA_9_5_STEP
 | `day-03/` | 3일 차 전날 | 검색·filter·정렬·품질 테스트 |
 | `day-04/` | 4일 차 전날 | 집계·Discover·Lens·Dashboard |
 | `day-05/` | 5일 차 전날 | ES\|QL, AI Search 이론, 제출·발표 |
+| `search-app-template/` | 강사 지정 시점 | 개인 인덱스·Search API를 연결하는 로컬 FE·BE 검색 앱 |
 
 ## 공개 저장소 주의
 
