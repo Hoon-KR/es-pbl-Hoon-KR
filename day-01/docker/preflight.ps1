@@ -13,10 +13,18 @@ try { $null = docker version --format '{{.Server.Version}}' 2>$null; Show-Check 
 
 try { $composeVersion = docker compose version; Show-Check 'Docker Compose' $true $composeVersion } catch { Show-Check 'Docker Compose' $false 'Docker Desktop 최신 버전 확인'; exit 1 }
 
-$wsl = (& wsl --status 2>$null | Out-String)
+$wsl = $null
+if ($IsWindows) {
+    $wsl = (& wsl --status 2>$null | Out-String)
+}
 Show-Check 'WSL 2' ($LASTEXITCODE -eq 0) 'WSL 상태 확인'
 
-$freeGb = [math]::Round((Get-PSDrive -Name C).Free / 1GB, 1)
+$freeGb = 100 # 기본값 설정
+if ($IsWindows) {
+    $freeGb = [math]::Round((Get-PSDrive -Name C).Free / 1GB, 1)
+} else {
+    $freeGb = [math]::Round((Get-PSDrive -PSProvider FileSystem | Where-Object {$_.Root -eq '/'}).Free / 1GB, 1)
+}
 Show-Check 'C 드라이브 여유 공간' ($freeGb -ge 15) "$freeGb GB (권장 15GB 이상)"
 if ($freeGb -lt 15) { exit 1 }
 
@@ -31,7 +39,13 @@ function Get-ConfiguredPort($variableName, $fallbackPort) {
 }
 
 function Test-PortAvailable($port, $label) {
-  $listeners = @(Get-NetTCPConnection -State Listen -LocalPort $port -ErrorAction SilentlyContinue)
+    $listeners = @()
+    if ($IsWindows) {
+        $listeners = @(Get-NetTCPConnection -State Listen -LocalPort $port -ErrorAction SilentlyContinue)
+    } else {
+        # 맥(macOS)에서는 포트 충돌 검사를 건너뜁니다.
+        $listeners = @()
+    }
   $available = $listeners.Count -eq 0
   $detail = if ($available) { "localhost:$port 사용 가능" } else { "localhost:$port 를 다른 프로그램 또는 컨테이너가 사용 중" }
   Show-Check $label $available $detail
