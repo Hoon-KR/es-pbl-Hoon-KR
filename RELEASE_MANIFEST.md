@@ -7,10 +7,31 @@
 | Day 3 전날 | `day-03/`, 검색 요청·테스트 양식 | 요청 결과·PBL 변환 항목 검증 |
 | Day 4 전날 | `day-04/` | Data View·Dashboard 기준·화면 확인 |
 | Day 5 전날 | `day-05/`, 제출·발표 양식 | 미래 정답·평가 메모 제외 |
+| 강사 지정 시점 | `search-app-template/` | 실제 `.env` 제외, 독립 폴더 복사·자동 비밀번호 설정·로컬 검색 검증 |
 
 각 공개 직전 `QUALITY_GATES.md`의 공개 범위·명령 검증 항목을 점검한다.
 
+## 2026-09-03 — FE·BE 검색 앱 템플릿
+
+- 특정 Day에 종속되지 않는 `search-app-template/`을 저장소 루트에 공개한다.
+- 학생은 템플릿을 개인 PBL 저장소로 복사하고 `config/app.config.json`, `config/search-request.json`만 수정한다.
+- 첫 `start.ps1` 실행에서 ES 비밀번호를 한 번 입력하면 Git 제외 대상 `.env`가 자동 생성된다.
+- 별도 Node.js·npm 설치 없이 Docker Desktop과 실행 중인 Day 1 ES를 사용한다.
+- 실제 `.env`, 강사용 자료, 정답, 평가 메모는 포함하지 않는다.
+
 현재 Day2 공개 경로: 교재는 `day-02/student-workbook.md`, 실습 안내·요청·작성 양식은 `day-02/practice/`다. 아래 최초 공개 기록의 v1은 이력 구분이며 학생이 선택할 별도 버전 폴더가 아니다.
+
+## 2026-09-03 — Day 4 Kibana Dashboard 실습
+
+- 학생교재, 8교시 실습가이드, Kibana 9.5.0 실제 화면 캡처 20종을 공개한다.
+- Data View부터 각 패널·Control·저장·검증·백업까지 실제 클릭 순서를 담은 `KIBANA_9_5_STEP_BY_STEP.md`와 그래프 완성형 빠른 색인 `CHART_GALLERY.md`를 공개한다.
+- 교시별 연습문제는 필수 4문제+선택 도전 1문제씩 총 40문제이며, 답안 작성 방법을 함께 제공한다.
+- 공통 `products` 20,000건에서 Data View·Discover·KQL·Metric·Bar·Table·price custom ranges·Donut·Line·Dashboard·Control·Filter를 실습한다.
+- 개인 PBL은 사용자·판단·질문4개·필요 field·데이터 적합성을 먼저 설계한 뒤 개인 Dashboard 4패널 이상과 상호작용 1개를 만든다.
+- 개인 데이터가 부족한 학생은 공통 `products`로 기능 실습을 계속하고 부족 field·mapping type·값 분포·생성 규칙을 제출한다.
+- Dashboard 핵심값 3개 교차 검증, 사용자 행동 2개, 오류 수정 1개, 결과3·한계2·필요 데이터1을 최종 근거로 남긴다.
+- 강사용 PPT·대본·정답·평가 메모·실제 인증정보·Day5 자료는 제외한다.
+- Kibana 9.5.0 기준 Donut(Pie의 Donut hole), 월 interval(`1M`), custom ranges, 패널 Settings/Inspect 위치를 확인하고 PDF를 필수 제출에서 제외했다.
 
 ## 2026-09-01 — Day 3 검색·품질 실습
 
