@@ -1,0 +1,4 @@
+# Local-only override: raise Kibana's memory limit (not part of the shared course file).
+services:
+  kibana:
+    mem_limit: 2147483648
