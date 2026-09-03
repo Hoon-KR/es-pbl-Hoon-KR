@@ -11,7 +11,7 @@
 3. PowerShell에서 `./start.ps1`을 실행합니다. 개인 저장소로 복사한 뒤 처음 실행하면 Day 1 ES 비밀번호를 한 번 묻고 `.env`를 자동 생성합니다.
 4. 브라우저에서 <http://localhost:3000>을 엽니다.
 
-전체 설정·실행·시험 절차는 [STUDENT_GUIDE.md](./STUDENT_GUIDE.md)를 순서대로 진행합니다.
+개인 인덱스를 처음 연결할 때는 **[APPLY_MY_INDEX_GUIDE.md](./APPLY_MY_INDEX_GUIDE.md)**를 0단계부터 순서대로 진행합니다. 전체 설정 참고와 오류 대응은 [STUDENT_GUIDE.md](./STUDENT_GUIDE.md)를 사용합니다.
 
 ## 학생이 수정하는 파일
 
